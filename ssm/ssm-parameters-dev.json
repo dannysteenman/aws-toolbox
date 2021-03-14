@@ -1,0 +1,12 @@
+[
+  {
+    "Type": "String",
+    "Name": "SSMParameterName",
+    "Value": "test"
+  },
+  {
+    "Type": "String",
+    "Name": "SSMParameterName2",
+    "Value": "test2"
+  }
+]
