@@ -1,8 +1,4 @@
-<br/>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/dannysteenman/aws-toolbox/main/images/aws-toolbox-logo.png">
-</p>
-<br/>
+![AWS Toolbox](aws-toolbox-header.jpg)
 
 # AWS Toolbox
 
