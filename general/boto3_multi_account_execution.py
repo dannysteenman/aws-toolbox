@@ -1,6 +1,10 @@
-import boto3
-
+#  https://github.com/dannysteenman/aws-toolbox
+#
+#  License: MIT
+#
 # This script gives you the ability to run Boto3 commands on all accounts which are specified in the aws_account_list
+
+import boto3
 
 aws_account_list = ["111111111111", "222222222222", "333333333333"]
 
