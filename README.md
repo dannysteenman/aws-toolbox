@@ -35,17 +35,17 @@ Review the [Contributing Guidelines](https://github.com/dannysteenman/aws-toolbo
 
 | General scripts                                                                  | Functionality                                                                                                        |
 | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **[boto3-multi-account-execution.py](general/boto3-multi-account-execution.py)** | This script gives you the ability to run Boto3 commands on all accounts which are specified in the aws_account_list. |
+| **[boto3_multi_account_execution.py](general/boto3_multi_account_execution.py)** | This script gives you the ability to run Boto3 commands on all accounts which are specified in the aws_account_list. |
 
 | EC2 scripts                                          | Functionality                                                                   |
 | ---------------------------------------------------- | ------------------------------------------------------------------------------- |
-| **[ec2-asg-ssh.sh](ec2/ec2-asg-ssh.sh)**             | A ssh wrapper for connecting quickly to EC2 instances in an Auto Scaling group. |
-| **[ec2-available-eip.sh](ec2/ec2-available-eip.sh)** | Shows Elastic IP addresses which haven't been associated yet.                   |
+| **[ec2_asg_ssh.sh](ec2/ec2_asg_ssh.sh)**             | A ssh wrapper for connecting quickly to EC2 instances in an Auto Scaling group. |
+| **[ec2_available_eip.sh](ec2/ec2_available_eip.sh)** | Shows Elastic IP addresses which haven't been associated yet.                   |
 
 | SSM scripts                                                    | Functionality                                                        |
 | -------------------------------------------------------------- | -------------------------------------------------------------------- |
-| **[ssm-parameter-delete.sh](ssm/ssm-parameter-delete.sh)**     | This script allows you to delete ssm parameters through a json file. |
-| **[ssm-parameter-register.sh](ssm/ssm-parameter-register.sh)** | This script allows you to import ssm parameters through a json file. |
+| **[ssm_parameter_delete.sh](ssm/ssm_parameter_delete.sh)**     | This script allows you to delete ssm parameters through a json file. |
+| **[ssm_parameter_register.sh](ssm/ssm_parameter_register.sh)** | This script allows you to import ssm parameters through a json file. |
 
 ## List of useful DevOps tools:
 
