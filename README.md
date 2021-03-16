@@ -1,23 +1,24 @@
 ![AWS Toolbox](aws-toolbox-header.jpg)
 
-# AWS Toolbox
+# AWS Toolbox 🧰
 
-A collection of AWS tools like Shell & Python scripts that make your DevOps life a little easier.
+A collection of DevOps tools including shell & python scripts that automate the boring stuff in AWS.
 
 ## Table of Contents
 
-- [AWS Toolbox](#aws-toolbox)
+- [AWS Toolbox 🧰](#aws-toolbox-)
   - [Table of Contents](#table-of-contents)
   - [Contributing](#contributing)
   - [Getting started](#getting-started)
-  - [Scripts sorted on AWS Service](#scripts-sorted-on-aws-service)
-  - [List of useful DevOps tools](#list-of-useful-devops-tools)
+  - [Scripts categorized by AWS Service](#scripts-categorized-by-aws-service)
+  - [List of useful DevOps tools & resources](#list-of-useful-devops-tools--resources)
     - [API](#api)
+    - [CI/CD](#cicd)
+    - [Cloud Access](#cloud-access)
+    - [ECS](#ecs)
     - [Infra as Code](#infra-as-code)
     - [S3](#s3)
-    - [CI/CD](#cicd)
-  - [Creator](#creator)
-  - [Contributors](#contributors)
+  - [Author](#author)
 
 ## Contributing
 
@@ -32,7 +33,7 @@ Review the [Contributing Guidelines](https://github.com/dannysteenman/aws-toolbo
 - [Configure the AWS CLI for usage](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
 - [Some examples on how to use the AWS CLI to work with AWS Services](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-services.html)
 
-## Scripts sorted on AWS Service
+## Scripts categorized by AWS Service
 
 | **General scripts**                                                              | **Functionality**                                                                                                           |
 | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
@@ -46,15 +47,23 @@ Review the [Contributing Guidelines](https://github.com/dannysteenman/aws-toolbo
 | **[ssm_parameter_delete.sh](ssm/ssm_parameter_delete.sh)**                       | Allows you to delete ssm parameters through a json file.                                                                    |
 | **[ssm_parameter_register.sh](ssm/ssm_parameter_register.sh)**                   | Allows you to import ssm parameters through a json file.                                                                    |
 
-## List of useful DevOps tools
-
-### Cloud Access
-
-- **[Leapp](https://github.com/Noovolari/leapp)** - Cross-platform APP to manage Programmatic access in AWS
+## List of useful DevOps tools & resources
 
 ### API
 
 - **[steampipe](https://github.com/turbot/steampipe)** - Query AWS resources in a SQL like fashion.
+
+### CI/CD
+
+- **[Awesome CI](https://github.com/ligurio/awesome-ci)** - List of Continuous Integration services.
+
+### Cloud Access
+
+- **[Leapp](https://github.com/Noovolari/leapp)** - Cross-platform APP to manage Programmatic access in AWS.
+
+### ECS
+
+- **[Awesome ECS](https://github.com/nathanpeck/awesome-ecs)** - A curated list of awesome ECS guides, development tools, and resources.
 
 ### Infra as Code
 
@@ -67,12 +76,6 @@ Review the [Contributing Guidelines](https://github.com/dannysteenman/aws-toolbo
 
 - **[s3s3mirror](https://github.com/cobbzilla/s3s3mirror)** - A lightning-fast and highly concurrent utility for mirroring content from one S3 bucket to another.
 
-### CI/CD
-
-- **[Awesome CI](https://github.com/ligurio/awesome-ci)** - List of Continuous Integration services
-
-## Creator
+## Author
 
 **[Danny Steenman](https://dannys.cloud)**
-
-## Contributors
