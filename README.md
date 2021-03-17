@@ -37,6 +37,7 @@ Review the [Contributing Guidelines](https://github.com/dannysteenman/aws-toolbo
 
 | **General scripts**                                                              | **Functionality**                                                                                                           |
 | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| **[alias](cli/alias)**                                                           | This file contains a bunch of easy to remember aliases that runs complex AWS CLI commands.                                  |
 | **[boto3_multi_account_execution.py](general/boto3_multi_account_execution.py)** | Gives you the ability to run Boto3 commands on all accounts which are specified in the aws_account_list.                    |
 | **CloudWatch scripts**                                                           |                                                                                                                             |
 | **[cloudwatch_retention_policy.py](cloudwatch/cloudwatch_retention_policy.py)**  | Sets a CloudWatch Logs Retention Policy to x number of days for all log groups in the region that you exported in your cli. |
@@ -64,6 +65,7 @@ Review the [Contributing Guidelines](https://github.com/dannysteenman/aws-toolbo
 ### ECS
 
 - **[Awesome ECS](https://github.com/nathanpeck/awesome-ecs)** - A curated list of awesome ECS guides, development tools, and resources.
+- **[AWS Copilot CLI](https://github.com/aws/copilot-cli)** - The AWS Copilot CLI is a tool for developers to build, release and operate production ready containerized applications on Amazon ECS and AWS Fargate.
 
 ### Infra as Code
 

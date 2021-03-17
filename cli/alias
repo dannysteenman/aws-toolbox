@@ -1,0 +1,331 @@
+#  https://github.com/dannysteenman/aws-toolbox
+#
+#  License: MIT
+#
+# This file allows you to run complex cli commands with easy to remember aliases.
+#
+# See https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-alias.html for more information about cli aliases.
+#
+# To install: copy this file to ~/.aws/cli/alias
+# Atlernatively create a symlink from this repository: ln -sf ~/aws-toolbox/cli/alias ~/.aws/cli/alias
+# Usage: Use an alias in combination with the aws cli e.g. `aws whoami` to invoke the full command `aws sts get-caller-identity`
+
+[toplevel]
+
+whoami = sts get-caller-identity
+
+#----------------#
+# Cloudformation #
+#----------------#
+
+cfn = cloudformation
+
+cfnls =
+  !f() {
+    aws cloudformation list-stacks
+  }; f
+
+cfn-list =
+  !f() {
+    aws cloudformation list-stacks \
+      --query "StackSummaries[?StackStatus != 'DELETE_COMPLETE' && starts_with(StackName, '${1}')].{StackName: StackName, StackStatus: StackStatus, UpdateTime: LastUpdatedTime}" \
+      --output table
+  }; f
+
+cfn-describe =
+  !f() {
+    if [ -z "$1" ]; then
+      echo "usage: aws describe <stack_name>"
+    else
+      aws cloudformation describe-stacks --stack-name $1 \
+      --output table
+    fi
+  }; f
+
+cfn-outputs =
+  !f() {
+    if [ -z "$1" ]; then
+      echo "usage: aws outputs <stack_name>"
+    else
+      aws cloudformation describe-stacks \
+        --stack-name $1 \
+        --query "Stacks[].Outputs[].{OutputKey: OutputKey, OutputValue: OutputValue}" \
+        --output table
+    fi
+  }; f
+
+cfn-resources =
+  !f() {
+    if [ -z "$1" ]; then
+      echo "usage: aws resources <stack_name>"
+    else
+      aws cloudformation describe-stack-resources \
+        --stack-name $1 \
+        --query "StackResources[].{ResourceStatus: ResourceStatus, LogicalResourceId: LogicalResourceId, PhysicalResourceId: PhysicalResourceId}" \
+        --output table
+    fi
+  }; f
+
+cfn-events =
+  !f() {
+    if [ -z "$1" ]; then
+      echo "usage: aws events <stack_name>"
+    else
+      aws cloudformation describe-stack-events \
+        --stack-name $1 \
+        --query "StackEvents[].[Timestamp,ResourceStatus,LogicalResourceId,ResourceStatusReason]" \
+        --output table
+    fi
+  }; f
+
+cfn-errors =
+  !f() {
+    if [ -z "$1" ]; then
+      echo "usage: aws errors <stack_name>"
+    else
+      aws cloudformation describe-stack-events \
+        --stack-name $1 \
+        --query "StackEvents[?ResourceStatus=='CREATE_FAILED' || ResourceStatus=='UPDATE_FAILED'].[Timestamp,ResourceStatus,LogicalResourceId,ResourceStatusReason]" \
+        --output table
+    fi
+  }; f
+
+#-----------------------#
+# Cloudformation deploy #
+#-----------------------#
+
+cfn-package =
+  !f() {
+    if [ -z "$2" ]; then
+      template="template.yml"
+    else
+      template=$2
+    fi
+    if [ -z "$3" ]; then
+      packaged="packaged.yml"
+    else
+      packaged=$3
+    fi
+
+    if [ -z "$1" ]; then
+      echo "usage: aws package <s3bucket> [<source_template>] [<target_template>]"
+    else
+      aws cloudformation package \
+        --template $template \
+        --s3-bucket $1 \
+        --output-template-file $packaged
+    fi
+  }; f
+
+cfn-deploy =
+  !f() {
+    if [ -z "$2" ]; then
+      template="template.yml"
+    else
+      template=$2
+    fi
+
+    if [ -z "$1" ]; then
+      echo "usage: aws package <stack_name> [<template>]"
+    else
+      aws cloudformation deploy \
+        --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM \
+        --stack-name $1 \
+        --template $template
+    fi
+  }; f
+
+cfn-delete =
+  !f() {
+    if [ -z "$1" ]; then
+      echo "usage: aws delete <stack_name>"
+    else
+      aws cloudformation delete-stack \
+        --stack-name $1
+    fi
+  }; f
+
+cfn-launch =
+  !f() {
+    if [ -z "$3" ]; then
+      template="template.yml"
+    else
+      template=$3
+    fi
+
+    if [ "$template" == "packaged.yml" ]; then
+      echo "template should not be packaged.yml"
+      exit 1
+    fi
+
+    if [ -z "$1" ]; then
+      echo "usage: aws delete <s3bucket> <stack_name> [<template>]"
+    else
+      aws cloudformation package \
+        --template $template \
+        --s3-bucket $1 \
+        --output-template-file packaged.yml
+
+      aws cloudformation deploy \
+        --stack-name $2 \
+        --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM \
+        --template packaged.yml
+    fi
+  }; f
+
+#-----------------------#
+# VPC                   #
+#-----------------------#
+
+# AMI Owner
+ami-owner = !f() { aws ec2 describe-instances --filters Name=image-id,Values=ami-a6a7c1c6 --query 'Reservations[].Instances[].{Owner: Tags[?Key==`owner`].Value | [0],ID:InstanceId}' --output table; }; f
+
+# Decode Authorization Message
+de-auth = !f() { aws sts decode-authorization-message --encoded-message ${1} --output text > ~/Downloads/output.json && \
+            atom ~/Downloads/output.json; }; f
+
+# Instance ID from Name
+name-id = !f() { aws ec2 describe-instances --query 'Reservations[].Instances[].InstanceId' --filters Name=instance-state-name,Values=running Name=tag:Name,Values=${1} --output text; }; f
+
+# Instance DNS from ID
+id-dns = !f() { aws ec2 describe-instances --instance-ids ${1} --query 'Reservations[].Instances[].NetworkInterfaces[].PrivateIpAddresses[].PrivateDnsName' --output text; }; f
+
+# Instance ENI from ID
+id-eni = !f() { aws ec2 describe-instances --instance-ids ${1} --query 'Reservations[].Instances[].NetworkInterfaces[].NetworkInterfaceId' --output text; }; f
+
+# Instance Name from Instance ID
+id-name = !f() { aws ec2 describe-instances --instance-ids ${1} --query 'Reservations[].Instances[].Tags[?Key==`Name`].Value' --output text; }; f
+
+# Instance KeyName from Instance ID
+id-key = !f() { aws ec2 describe-instances --instance-ids ${1} --query 'Reservations[].Instances[].KeyName' --output text; }; f
+
+# Instance ID from DNS Name
+dns-id = !f() { aws ec2 describe-instances --filters Name=private-dns-name,Values=${1} --query 'Reservations[].Instances[].InstanceId' --output text; }; f
+
+# Get SG ID from SG Name
+sg-id = !f() { aws ec2 describe-security-groups --filters Name=group-name,Values=${1} --query 'SecurityGroups[].GroupId' --output text; }; f
+
+# List SG Rules from SG ID
+sg-rules = !f() { aws ec2 describe-security-groups --group-ids ${1} --query 'SecurityGroups[].IpPermissions'; }; f
+
+# Instance Name from Instance Name
+name-dns = !f() { aws ec2 describe-instances --filters Name=tag:Name,Values=${1} Name=instance-state-name,Values=running --query 'Reservations[].Instances[].PrivateDnsName' --output text; }; f
+
+# Instance IP from Instance Name
+name-ip = !f() { aws ec2 describe-instances --filters Name=tag:Name,Values=${1} Name=instance-state-name,Values=running --query 'Reservations[].Instances[].NetworkInterfaces[].PrivateIpAddresses[].PrivateIpAddress' --output text; }; f
+
+# List KeyName using Instance Name
+name-key = !f() { aws ec2 describe-instances --filters Name=tag:Name,Values=${1} Name=instance-state-name,Values=running --query 'Reservations[].Instances[].KeyName' --output text; }; f
+
+# List of Machines Matching a Name
+name-list = !f() { aws ec2 describe-instances --filters Name=tag:Name,Values=${1} Name=instance-state-name,Values=running --query 'Reservations[].Instances[].Tags[?Key==`Name`].Value' --output text; }; f
+
+# Instance ID from Instance IP
+ip-id = !f() { aws ec2 describe-instances --filters Name=network-interface.addresses.private-ip-address,Values=${1} --query 'Reservations[].Instances[].InstanceId' --output text; }; f
+
+# Instance Name from Private IP
+ip-name = !f() { aws ec2 describe-instances --filters Name=network-interface.addresses.private-ip-address,Values=${1} --query 'Reservations[].Instances[].Tags[?Key==`Name`].Value' --output text; }; f
+
+# Instance DNS from Private IP
+ip-dns = !f() { aws ec2 describe-instances --query 'Reservations[].Instances[].NetworkInterfaces[].PrivateIpAddresses[].PrivateDnsName' --filters Name=network-interface.addresses.private-ip-address,Values=${1} --output text; }; f
+
+# SecurityGroup ID from Private IP
+ip-sgid = !f() { aws ec2 describe-instances --query 'Reservations[].Instances[].SecurityGroups[].GroupId' --filters Name=network-interface.addresses.private-ip-address,Values=${1} --output text; }; f
+
+# Instance Key from Private IP
+ip-key = !f() { aws ec2 describe-instances --filters Name=network-interface.addresses.private-ip-address,Values=${1} --query 'Reservations[].Instances[].KeyName' --output text; }; f
+
+# List Image ID for an Instance ID
+image-id = !f() { aws ec2 describe-instances --instance-ids ${1} --query 'Reservations[].Instances[].ImageId' --output text; }; f
+
+# List or Set Your Region
+region = !f() { [[ $# -eq 1 ]] && aws configure set region "$1" || aws configure get region; }; f
+
+# List Network ACLs
+net-acls = !f() { aws ec2 describe-network-acls --network-acl-ids ${1} --query 'NetworkAcls[].Entries'; }; f
+
+# List IAM Access Keys
+iam-keys = !f() { for user in $(aws iam list-users --output text | awk '{print $NF}'); do aws iam list-access-keys --user $user --output text; done; }; f
+
+# List All Availability Zones
+list-azs = !f() { aws ec2 describe-availability-zones $1 --query AvailabilityZones[].ZoneName --output text; }; f
+
+# Docker ECR Login
+ecr-login =
+  !f() {
+    endpoint=$(aws ecr get-authorization-token --output text --query 'authorizationData[].proxyEndpoint')
+    passwd=$(aws ecr get-authorization-token --output text --query 'authorizationData[].authorizationToken' | base64 --decode | cut -d: -f2)
+    echo $passwd| docker login -u AWS --password-stdin $endpoint
+  }; f
+
+# Instance Size by Name
+instance-size =
+  !f() {
+    instances=$(aws ec2 describe-instances --query 'Reservations[].Instances[].InstanceId' --filters "Name=tag:Name,Values='${1}'" --output text)
+    aws ec2 describe-instances --instance-ids $instances --filters 'Name=instance-state-name,Values=running' \
+    --query 'Reservations[].Instances[].{Name: Tags[?Key==`Name`].Value | [0],Size:InstanceType,ID:InstanceId}' \
+    --output table
+  }; f
+
+# List VPC Peers
+vpc-peers =
+  !f() {
+    aws ec2 describe-vpc-peering-connections \
+    --query 'VpcPeeringConnections[].Tags[?Key==`Name`].Value' --output text | xargs -n1 | sort -d
+  }; f
+
+# List EC2 Instances
+running-instances = ec2 describe-instances \
+    --filter Name=instance-state-name,Values=running \
+    --output table \
+    --query 'Reservations[].Instances[].{ID: InstanceId,Hostname: PublicDnsName,Name: Tags[?Key==`Name`].Value | [0],Type: InstanceType, Platform: Platform || `Linux`}'
+
+# List EC2 Volumes
+ebs-volumes = ec2 describe-volumes \
+    --query 'Volumes[].{VolumeId: VolumeId,State: State,Size: Size,Name: Tags[0].Value,AZ: AvailabilityZone}' \
+    --output table
+
+# List Amazon Linux AMI's
+amazon-linux-amis = ec2 describe-images \
+    --filter \
+      Name=owner-alias,Values=amazon \
+      Name=name,Values="amzn-ami-hvm-*" \
+      Name=architecture,Values=x86_64 \
+      Name=virtualization-type,Values=hvm \
+      Name=root-device-type,Values=ebs \
+      Name=block-device-mapping.volume-type,Values=gp2 \
+    --query "reverse(sort_by(Images, &CreationDate))[*].[ImageId,Name,Description]" \
+    --output text
+
+# List EC2 Security Groups
+open-security-groups = ec2 describe-security-groups \
+    --filters "Name=ip-permission.to-port,Values=22"  \
+    --query 'SecurityGroups[?length(IpPermissions[?ToPort==`22` && contains(IpRanges[].CidrIp, `0.0.0.0/0`)]) > `0`].{GroupName: GroupName, TagName: Tags[?Key==`Name`].Value | [0]}' \
+    --output table
+
+myip =
+  !f() {
+    dig +short myip.opendns.com @resolver1.opendns.com
+  }; f
+
+allow-my-ip =
+  !f() {
+    my_ip=$(aws myip)
+    aws ec2 authorize-security-group-ingress --group-name ${1} --protocol ${2} --port ${3} --cidr $my_ip/32
+  }; f
+
+revoke-my-ip =
+  !f() {
+    my_ip=$(aws myip)
+    aws ec2 revoke-security-group-ingress --group-name ${1} --protocol ${2} --port ${3} --cidr $my_ip/32
+  }; f
+
+allow-my-ip-all =
+  !f() {
+    aws allow-my-ip ${1} all all
+  }; f
+
+revoke-my-ip-all =
+  !f() {
+    aws revoke-my-ip ${1} all all
+  }; f
