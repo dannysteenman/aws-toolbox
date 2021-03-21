@@ -10,16 +10,21 @@ A collection of DevOps tools including shell & python scripts that automate the 
   - [Table of Contents](#table-of-contents)
   - [Contributing](#contributing)
   - [Getting started](#getting-started)
-  - [Scripts categorized by AWS Service](#scripts-categorized-by-aws-service)
-  - [List of useful DevOps tools & resources](#list-of-useful-devops-tools--resources)
+  - [Shell & Python scripts categorized by AWS Service](#shell--python-scripts-categorized-by-aws-service)
+    - [General scripts](#general-scripts)
+    - [CloudWatch scripts](#cloudwatch-scripts)
+    - [EC2 scripts](#ec2-scripts)
+    - [SSM scripts](#ssm-scripts)
+  - [DevOps tools & Resources](#devops-tools--resources)
     - [API](#api)
+    - [Authentication](#authentication)
     - [CI/CD](#cicd)
-    - [Cloud Access](#cloud-access)
     - [EC2](#ec2)
     - [ECS](#ecs)
     - [Infra as Code](#infra-as-code)
     - [Lambda](#lambda)
     - [S3](#s3)
+  - [Blogroll](#blogroll)
   - [Author](#author)
 
 ## Contributing
@@ -35,34 +40,40 @@ Review the [Contributing Guidelines](https://github.com/dannysteenman/aws-toolbo
 - [Configure the AWS CLI for usage](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
 - [Some examples on how to use the AWS CLI to work with AWS Services](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-services.html)
 
-## Scripts categorized by AWS Service
+## Shell & Python scripts categorized by AWS Service
 
-| **General scripts**                                                              | **Functionality**                                                                                                           |
-| -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| **[alias](cli/alias)**                                                           | This file contains a bunch of easy to remember aliases that runs complex AWS CLI commands.                                  |
-| **[boto3_multi_account_execution.py](general/boto3_multi_account_execution.py)** | Gives you the ability to run Boto3 commands on all accounts which are specified in the aws_account_list.                    |
-| **CloudWatch scripts**                                                           |                                                                                                                             |
-| **[cloudwatch_retention_policy.py](cloudwatch/cloudwatch_retention_policy.py)**  | Sets a CloudWatch Logs Retention Policy to x number of days for all log groups in the region that you exported in your cli. |
-| **EC2 scripts**                                                                  |                                                                                                                             |
-| **[ec2_asg_ssh.sh](ec2/ec2_asg_ssh.sh)**                                         | A ssh wrapper for connecting quickly to EC2 instances in an Auto Scaling group.                                             |
-| **[ec2_available_eip.sh](ec2/ec2_available_eip.sh)**                             | Shows Elastic IP addresses which haven't been associated yet.                                                               |
-| **SSM scripts**                                                                  |                                                                                                                             |
-| **[ssm_parameter_delete.sh](ssm/ssm_parameter_delete.sh)**                       | Allows you to delete ssm parameters through a json file.                                                                    |
-| **[ssm_parameter_register.sh](ssm/ssm_parameter_register.sh)**                   | Allows you to import ssm parameters through a json file.                                                                    |
+### General scripts
 
-## List of useful DevOps tools & resources
+- **[alias](cli/alias)** - This file contains a bunch of easy to remember aliases that runs complex AWS CLI commands.
+- **[boto3_multi_account_execution.py](general/boto3_multi_account_execution.py)** - Gives you the ability to run Boto3 commands on all accounts which are specified in the aws_account_list.
+
+### CloudWatch scripts
+- **[cloudwatch_retention_policy.py](cloudwatch/cloudwatch_retention_policy.py)** - Sets a CloudWatch Logs Retention Policy to x number of days for all log groups in the region that you exported in your cli.
+
+### EC2 scripts
+
+- **[ec2_asg_ssh.sh](ec2/ec2_asg_ssh.sh)** - A ssh wrapper for connecting quickly to EC2 instances in an Auto Scaling group.
+- **[ec2_available_eip.sh](ec2/ec2_available_eip.sh)** - Shows Elastic IP addresses which haven't been associated yet.
+
+### SSM scripts
+- **[ssm_parameter_delete.sh](ssm/ssm_parameter_delete.sh)** - Allows you to delete ssm parameters through a json file.
+- **[ssm_parameter_register.sh](ssm/ssm_parameter_register.sh)** - Allows you to import ssm parameters through a json file.
+
+## DevOps tools & Resources
+
+This list contains links to tools that automate or simplify the usage of AWS in the console, CLI or API's.
 
 ### API
 
 - **[steampipe](https://github.com/turbot/steampipe)** - Query AWS resources in a SQL like fashion.
 
+### Authentication
+
+- **[Leapp](https://github.com/Noovolari/leapp)** - Cross-platform APP to manage Programmatic access in AWS.
+
 ### CI/CD
 
 - **[Awesome CI](https://github.com/ligurio/awesome-ci)** - List of Continuous Integration services.
-
-### Cloud Access
-
-- **[Leapp](https://github.com/Noovolari/leapp)** - Cross-platform APP to manage Programmatic access in AWS.
 
 ### EC2
 
@@ -90,6 +101,18 @@ Review the [Contributing Guidelines](https://github.com/dannysteenman/aws-toolbo
 ### S3
 
 - **[s3s3mirror](https://github.com/cobbzilla/s3s3mirror)** - A lightning-fast and highly concurrent utility for mirroring content from one S3 bucket to another.
+
+
+## Blogroll
+
+A collection of AWS blogs that contain helpful tips and tricks.
+
+| RSS                                                                                                                                      | Blog title                                                | Description                                                                                                     |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| <a href="http://blogs.aws.amazon.com/security/blog/feed/recentPosts.rss"> <img src="rss.png" width="21" height="24" > </a>               | **[AWS Security](https://aws.amazon.com/blogs/security)** | The latest AWS security, identity, and compliance launches, announcements, and how-to posts.                    |
+| <a href="http://blogs.aws.amazon.com/application-management/blog/feed/recentPosts.rss"> <img src="rss.png" width="21" height="24" > </a> | **[AWS DevOps](https://aws.amazon.com/blogs/devops)**     | The latest AWS DevOps announcements, and how-to posts.                                                          |
+| <a href="http://techblog.netflix.com/feeds/posts/default"> <img src="rss.png" width="21" height="24" > </a>                              | **[Netflix Techblog](http://techblog.netflix.com)**       | Learn about Netflix’s world class engineering efforts, company culture, product developments and more.          |
+| <a href="https://www.lastweekinaws.com/feed/"> <img src="rss.png" width="21" height="24" > </a>                                          | **[Last week in AWS](https://www.lastweekinaws.com)**     | We’re the internet’s only snarky, sarcastic resource for literally anything and everything AWS… and we know it. |
 
 ## Author
 
