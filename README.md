@@ -15,8 +15,10 @@ A collection of DevOps tools including shell & python scripts that automate the 
     - [API](#api)
     - [CI/CD](#cicd)
     - [Cloud Access](#cloud-access)
+    - [EC2](#ec2)
     - [ECS](#ecs)
     - [Infra as Code](#infra-as-code)
+    - [Lambda](#lambda)
     - [S3](#s3)
   - [Author](#author)
 
@@ -62,6 +64,10 @@ Review the [Contributing Guidelines](https://github.com/dannysteenman/aws-toolbo
 
 - **[Leapp](https://github.com/Noovolari/leapp)** - Cross-platform APP to manage Programmatic access in AWS.
 
+### EC2
+
+- **[AutoSpotting](https://github.com/AutoSpotting/AutoSpotting)** - AutoSpotting is the leading open source spot market automation tool, optimized towards quick/easy/frictionless adoption of the EC2 spot market at any scale.
+
 ### ECS
 
 - **[Awesome ECS](https://github.com/nathanpeck/awesome-ecs)** - A curated list of awesome ECS guides, development tools, and resources.
@@ -73,6 +79,13 @@ Review the [Contributing Guidelines](https://github.com/dannysteenman/aws-toolbo
 - **[Awesome CloudFormation](https://github.com/aws-cloudformation/awesome-cloudformation)** - A curated list of resources and projects for working with AWS CloudFormation.
 - **[Awesome Terraform](https://github.com/shuaibiyy/awesome-terraform)** - Curated list of resources on HashiCorp's Terraform.
 - **[CloudFormation Snippets](https://github.com/dannysteenman/cloudformation-yaml-snippets)** - This VS Code extension adds autocompletion for all the resources that AWS CloudFormation supports.
+- **[Open CDK Guide](https://github.com/kevinslin/open-cdk)** - This guide is an opinionated set of tips and best practices for working with the AWS Cloud Development Kit.
+
+### Lambda
+
+- **[AWS Lambda Power Tuning](https://github.com/alexcasalboni/aws-lambda-power-tuning)** - AWS Lambda Power Tuning is a state machine powered by AWS Step Functions that helps you optimize your Lambda functions for cost and/or performance in a data-driven way.
+- **[Serverless Cost Calculator Comparison](http://serverlesscalc.com)** - Calculating the cost for AWS Lambda, Azure Functions, Google Cloud Functions. Providing good comparison or prediction on how the cost can vary depending on the memory, execution time, and number of executions on different cloud providers.
+- **[Serverless Cost Calculator](https://cost-calculator.bref.sh)** - Estimate AWS costs when running serverless applications on AWS Lambda.
 
 ### S3
 
