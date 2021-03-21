@@ -1,0 +1,9 @@
+{
+    "ImageId": "ami-fed6a784",
+    "KeyName": "mykp",
+    "SecurityGroupIds": [ "sg-a9d06296" ],
+    "InstanceType": "m3.medium",
+    "Placement": {
+      "AvailabilityZone": "us-east-1a"
+    }
+  }
