@@ -113,7 +113,10 @@ A collection of AWS blogs that contain helpful tips and tricks.
 | <a href="http://blogs.aws.amazon.com/application-management/blog/feed/recentPosts.rss"> <img src="rss.png" width="22" height="22" > </a> | **[AWS DevOps](https://aws.amazon.com/blogs/devops)**     | The latest AWS DevOps announcements, and how-to posts.                                                          |
 | <a href="http://techblog.netflix.com/feeds/posts/default"> <img src="rss.png" width="22" height="22" > </a>                              | **[Netflix Techblog](http://techblog.netflix.com)**       | Learn about Netflix’s world class engineering efforts, company culture, product developments and more.          |
 | <a href="https://www.lastweekinaws.com/feed/"> <img src="rss.png" width="22" height="22" > </a>                                          | **[Last week in AWS](https://www.lastweekinaws.com)**     | We’re the internet’s only snarky, sarcastic resource for literally anything and everything AWS… and we know it. |
-
+| <a href="https://www.internetkatta.com/how-and-from-where-to-start-aws-cloud-journey"> <img src="rss.png" width="22" height="22" > </a>                                          | **[How and from where to start AWS cloud journey ?](https://www.internetkatta.com/)**     | Helpful notes to kick start AWS cloud journey. |
+| <a href="https://www.internetkatta.com/want-to-know-magic-of-aws-cloudwatch"> <img src="rss.png" width="22" height="22" > </a>                                          | **[Want to know magic of AWS CloudWatch ?](https://www.internetkatta.com/)**     | Details about CloudWatch and how its can use as monitoring |
+| <a href="https://www.internetkatta.com/develop-progress-bar-for-aws-s3-file-upload-using-javascript"> <img src="rss.png" width="22" height="22" > </a>                                          | **[Progress bar for AWS S3 file upload using Javascript](https://www.internetkatta.com/)**     | Develop progress bar for AWS S3 file upload using Javascript|
+| <a href="https://www.internetkatta.com/aws-lambda-monitoring-mechanism-using-sns"> <img src="rss.png" width="22" height="22" > </a>                                          | **[AWS Lambda monitoring mechanism using SNS](https://www.internetkatta.com/)**     | AWS Lambda monitoring mechanism using SNS|
 ## Author
 
 **[Danny Steenman](https://dannys.cloud)**
