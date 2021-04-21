@@ -14,6 +14,7 @@ A collection of DevOps tools including shell & python scripts that automate the 
     - [General scripts](#general-scripts)
     - [CloudWatch scripts](#cloudwatch-scripts)
     - [EC2 scripts](#ec2-scripts)
+    - [IAM scripts](#iam-scripts)
     - [SSM scripts](#ssm-scripts)
   - [DevOps tools & Resources](#devops-tools--resources)
     - [API](#api)
@@ -54,6 +55,10 @@ Review the [Contributing Guidelines](https://github.com/dannysteenman/aws-toolbo
 
 - **[ec2_asg_ssh.sh](ec2/ec2_asg_ssh.sh)** - A ssh wrapper for connecting quickly to EC2 instances in an Auto Scaling group.
 - **[ec2_available_eip.sh](ec2/ec2_available_eip.sh)** - Shows Elastic IP addresses which haven't been associated yet.
+
+### IAM scripts
+
+- **[assume_role.sh](iam/assume_role.sh)** - This script uses Simple Token Service (sts) to assume a role (on the destination account).
 
 ### SSM scripts
 - **[ssm_parameter_delete.sh](ssm/ssm_parameter_delete.sh)** - Allows you to delete ssm parameters through a json file.
