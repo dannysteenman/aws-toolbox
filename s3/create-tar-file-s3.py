@@ -1,9 +1,12 @@
+#Author : Avinash Dalvi 
+#Reference question : https://stackoverflow.com/questions/64341192/how-to-create-a-tar-file-containing-all-the-files-in-a-directory/64341789#64341789
+
+
 import boto3
 import tarfile
 import os.path
 s3Client = boto3.client('s3')
-#Reference : https://www.internetkatta.com/how-to-create-tar-file-compression-in-aws-s3 
-#https://stackoverflow.com/questions/64341192/how-to-create-a-tar-file-containing-all-the-files-in-a-directory/64341789#64341789
+#Reference : 
 
 s3object = boto3.resource('s3')
 
