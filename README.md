@@ -65,10 +65,10 @@ Review the [Contributing Guidelines](https://github.com/dannysteenman/aws-toolbo
 - **[ssm_parameter_register.sh](ssm/ssm_parameter_register.sh)** - Allows you to import ssm parameters through a json file.
 
 ### S3 scripts
-- **[create-tar-file-s3.py](https://github.com/aviboy2006/aws-s3-bucket-cheatsheet-code-examples/blob/main/create-tar-file-s3.py)** - Allows you to create tar file creation.
-- **[s3-list-file-older-than-number-of-days.py](https://github.com/aviboy2006/aws-s3-bucket-cheatsheet-code-examples/blob/main/s3-list-file-older-than-number-of-days.py)** - Allows you to list all files older than N numbers of days.
-- **[search-file-in-s3-bucket.py](https://github.com/aviboy2006/aws-s3-bucket-cheatsheet-code-examples/blob/main/search-file-in-s3-bucket.py)** - Allows you to search file in S3 bucket. 
-- **[search_subdirectory_s3_bucket.py](https://github.com/aviboy2006/aws-s3-bucket-cheatsheet-code-examples/blob/main/search_subdirectory_s3_bucket.py)** - Allows you to search subdirectory under nested folder structure. 
+- **[create-tar-file-s3.py](s3/create-tar-file-s3.py)** - Allows you to create tar file creation.
+- **[s3-list-file-older-than-number-of-days.py](s3/s3-list-file-older-than-number-of-days.py)** - Allows you to list all files older than N numbers of days.
+- **[search-file-in-s3-bucket.py](s3/search-file-in-s3-bucket.py)** - Allows you to search file in S3 bucket. 
+- **[search_subdirectory_s3_bucket.py](s3/search_subdirectory_s3_bucket.py)** - Allows you to search subdirectory under nested folder structure. 
 
 ## DevOps tools & Resources
 
