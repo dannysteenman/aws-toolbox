@@ -15,6 +15,7 @@ A collection of DevOps tools including shell & python scripts that automate the 
     - [CloudWatch scripts](#cloudwatch-scripts)
     - [EC2 scripts](#ec2-scripts)
     - [IAM scripts](#iam-scripts)
+    - [S3 scripts](#s3-scripts)
     - [SSM scripts](#ssm-scripts)
   - [DevOps tools & Resources](#devops-tools--resources)
     - [API](#api)
@@ -55,20 +56,21 @@ Review the [Contributing Guidelines](https://github.com/dannysteenman/aws-toolbo
 
 - **[ec2_asg_ssh.sh](ec2/ec2_asg_ssh.sh)** - A ssh wrapper for connecting quickly to EC2 instances in an Auto Scaling group.
 - **[ec2_available_eip.sh](ec2/ec2_available_eip.sh)** - Shows Elastic IP addresses which haven't been associated yet.
+- **[ec2_req_spot_instances.sh](ec2/ec2_req_spot_instances.sh)** - Enables you to run a request for spot instances.
+- **[ec2_resize_volume.sh](ec2/ec2_resize_volume.sh)** - specifies the desired volume size in GiB as a command line argument. If not specified, default to 20 GiB.
 
 ### IAM scripts
 
 - **[assume_role.sh](iam/assume_role.sh)** - This script uses Simple Token Service (sts) to assume a role (on the destination account).
 
+### S3 scripts
+- **[s3_create_tar_file.py](s3/s3_create_tar_file.py)** - Allows you to create tar file creation.
+- **[s3_list_file_older_than_number_of_days.py](s3/s3_list_file_older_than_number_of_days.py)** - Allows you to list all files older than N numbers of days.
+- **[s3_search_file_in_bucket.py](s3/s3_search_file_in_bucket.py)** - Allows you to search file in S3 bucket.
+- **[s3_search_subdirectory.py](s3/s3_search_subdirectory.py)** - Allows you to search subdirectory under nested folder structure.
 ### SSM scripts
 - **[ssm_parameter_delete.sh](ssm/ssm_parameter_delete.sh)** - Allows you to delete ssm parameters through a json file.
 - **[ssm_parameter_register.sh](ssm/ssm_parameter_register.sh)** - Allows you to import ssm parameters through a json file.
-
-### S3 scripts
-- **[create-tar-file-s3.py](s3/create-tar-file-s3.py)** - Allows you to create tar file creation.
-- **[s3-list-file-older-than-number-of-days.py](s3/s3-list-file-older-than-number-of-days.py)** - Allows you to list all files older than N numbers of days.
-- **[search-file-in-s3-bucket.py](s3/search-file-in-s3-bucket.py)** - Allows you to search file in S3 bucket. 
-- **[search_subdirectory_s3_bucket.py](s3/search_subdirectory_s3_bucket.py)** - Allows you to search subdirectory under nested folder structure. 
 
 ## DevOps tools & Resources
 
