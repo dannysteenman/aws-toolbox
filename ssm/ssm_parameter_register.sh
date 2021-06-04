@@ -1,6 +1,7 @@
 #!/bin/sh
 # This script allows you to import ssm parameters through a json file (see ssm-parameters-dev.json for example).
 # Create a json file for each specific environment in which you need parameters.
+# NOTE: This script uses jq, make sure it is installed on your system
 
 env=$1
 if [ -z "$env" ]; then

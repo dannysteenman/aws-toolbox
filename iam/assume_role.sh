@@ -2,7 +2,6 @@
 # This script uses Simple Token Service (sts) to assume a role (on the destination account)
 # Then it creates a temporary AWS credential that is stored in the client profile.
 # This script is perfect for AWS Codebuild commands than need crossaccount access.
-# NOTE: This script uses jq, make sure it is installed on your system
 #
 # Usage: ./assume_role.sh arn:aws:iam::012345678910:role/role-on-destination-that-needs-to-be-assumed profile-name-to-create
 # aws s3 ls --profile client-profile --region eu-central-1

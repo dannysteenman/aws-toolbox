@@ -1,6 +1,7 @@
 #!/bin/zsh
 # This script allows you to delete ssm parameters through a json file (see ssm-parameters-dev.json for example).
 # Create a json file for each specific environment in which you need to delete parameters.
+# NOTE: This script uses jq, make sure it is installed on your system
 
 env=$1
 if [ -z "$env" ]; then
