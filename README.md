@@ -18,11 +18,12 @@ A collection of DevOps tools including shell & python scripts that automate the 
     - [S3 scripts](#s3-scripts)
     - [SSM scripts](#ssm-scripts)
   - [DevOps tools & Resources](#devops-tools--resources)
-    - [API](#api)
+    - [General](#general)
     - [Authentication](#authentication)
     - [CI/CD](#cicd)
     - [EC2](#ec2)
     - [ECS](#ecs)
+    - [IAM](#iam)
     - [Infra as Code](#infra-as-code)
     - [Lambda](#lambda)
     - [S3](#s3)
@@ -76,9 +77,10 @@ Review the [Contributing Guidelines](https://github.com/dannysteenman/aws-toolbo
 
 This list contains links to tools that automate or simplify the usage of AWS in the console, CLI or API's.
 
-### API
+### General
 
 - **[steampipe](https://github.com/turbot/steampipe)** - Query AWS resources in a SQL like fashion.
+- **[AWS Nuke](https://github.com/rebuy-de/aws-nuke)** - Remove all resources from an AWS account.
 
 ### Authentication
 
@@ -97,12 +99,17 @@ This list contains links to tools that automate or simplify the usage of AWS in 
 - **[Awesome ECS](https://github.com/nathanpeck/awesome-ecs)** - A curated list of awesome ECS guides, development tools, and resources.
 - **[AWS Copilot CLI](https://github.com/aws/copilot-cli)** - The AWS Copilot CLI is a tool for developers to build, release and operate production ready containerized applications on Amazon ECS and AWS Fargate.
 
+### IAM
+
+- **[IAM Zero](https://iamzero.dev)** - IAM Zero detects identity and access management issues and automatically suggests least-privilege policies.
+
 ### Infra as Code
 
 - **[Awesome CDK](https://github.com/kolomied/awesome-cdk)** - Curated list of awesome AWS Cloud Development Kit (AWS CDK) open-source projects, guides, blogs and other resources.
 - **[Awesome CloudFormation](https://github.com/aws-cloudformation/awesome-cloudformation)** - A curated list of resources and projects for working with AWS CloudFormation.
 - **[Awesome Terraform](https://github.com/shuaibiyy/awesome-terraform)** - Curated list of resources on HashiCorp's Terraform.
-- **[CloudFormation Snippets](https://github.com/dannysteenman/cloudformation-yaml-snippets)** - This VS Code extension adds autocompletion for all the resources that AWS CloudFormation supports.
+- **[CDK Snippets](https://dannys.cloud/autocomplete-aws-cdk-l1-constructs-vs-code)** - This extension adds L1 construct snippets from CDK into Visual Studio Code.
+- **[CloudFormation Snippets](https://dannys.cloud/autocomplete-cloudformation-resources-vs-code)** - This extension adds snippets for all the AWS CloudFormation resources into Visual Studio Code.
 - **[Former2](https://github.com/iann0036/former2)** - Generate CloudFormation / Terraform / Troposphere templates from your existing AWS resources.
 - **[Open CDK Guide](https://github.com/kevinslin/open-cdk)** - This guide is an opinionated set of tips and best practices for working with the AWS Cloud Development Kit.
 
