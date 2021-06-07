@@ -27,6 +27,7 @@ A collection of DevOps tools including shell & python scripts that automate the 
     - [Infra as Code](#infra-as-code)
     - [Lambda](#lambda)
     - [S3](#s3)
+    - [SSM](#ssm)
   - [Blogroll](#blogroll)
   - [Author](#author)
 
@@ -123,6 +124,10 @@ This list contains links to tools that automate or simplify the usage of AWS in 
 
 - **[s3s3mirror](https://github.com/cobbzilla/s3s3mirror)** - A lightning-fast and highly concurrent utility for mirroring content from one S3 bucket to another.
 
+### SSM
+
+- **[aws-gate](https://github.com/xen0l/aws-gate)** - A Better AWS SSM Session manager CLI client.
+- **[aws-ssm-ec2-proxy-command](https://github.com/qoomon/aws-ssm-ec2-proxy-command)** - Open an SSH connection to your ec2 instances via AWS SSM without the need to open any ssh port in you security groups.
 
 ## Blogroll
 
