@@ -1,9 +1,9 @@
-name: Pylint
+name: Lints
 
 on: [push]
 
 jobs:
-  build:
+  pylint:
 
     runs-on: ubuntu-latest
 
@@ -20,3 +20,13 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         pylint `ls -R|grep .py$|xargs`
+        
+  shelllint:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+      - uses: actions/checkout@v1
+      - name: Run Shellcheck
+        uses: azohra/shell-linter@latest
+
