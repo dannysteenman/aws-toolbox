@@ -3,7 +3,7 @@
 # ------------------------------------------------
 # Command help information
 # ------------------------------------------------
-if [ "$1" == "help" ]; then
+if [ "$1" == "help" ]; the
   cat <<END
 A ssh wrapper for connecting quickly to EC2 instances in an Auto Scaling group.
 
