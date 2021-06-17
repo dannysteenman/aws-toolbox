@@ -102,6 +102,7 @@ This list contains links to tools that automate or simplify the usage of AWS in 
 
 ### IAM
 
+- **[IAM Floyd](https://github.com/udondan/iam-floyd)** - AWS IAM policy statement generator with fluent interface.
 - **[IAM Zero](https://iamzero.dev)** - IAM Zero detects identity and access management issues and automatically suggests least-privilege policies.
 
 ### Infra as Code
