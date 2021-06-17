@@ -21,10 +21,12 @@ Contributions via pull requests are much appreciated. Before sending us a pull r
 To send us a pull request, please:
 
 1. Fork the repository.
-2. Modify the source, focusing on the specific change you are contributing. If you also reformat all the code, it will be hard for us to focus on your change.
-3. Commit to your fork using clear commit messages.
-4. Send us a pull request, answering any default questions in the pull request interface.
-5. Stay involved in the conversation.
+2. Modify the source, focusing on the specific change you are contributing. 
+3. Reformat all the code, for Python scripts we use Black and for linting we use Flake8 with the following arguments: "--ignore=E203,E266,E501,F401,W503"
+4. If you commit and push the changes in your fork it will automatically trigger a linter action in GitHub Actions to validate the change.
+5. Commit to your fork using clear commit messages.
+6. Send us a pull request, answering any default questions in the pull request interface.
+7. Stay involved in the conversation.
 
 GitHub provides additional documentation on [forking a repository](https://help.github.com/articles/fork-a-repo/) and
 [creating a pull request](https://help.github.com/articles/creating-a-pull-request/).
