@@ -80,8 +80,9 @@ This list contains links to tools that automate or simplify the usage of AWS in 
 
 ### General
 
-- **[steampipe](https://github.com/turbot/steampipe)** - Query AWS resources in a SQL like fashion.
+- **[Steampipe](https://github.com/turbot/steampipe)** - Query AWS resources in a SQL like fashion.
 - **[AWS Nuke](https://github.com/rebuy-de/aws-nuke)** - Remove all resources from an AWS account.
+- **[AWS Security Tools](https://github.com/0xVariable/AWS-Security-Tools)** - A curated list of Security tools that you can use on AWS.
 
 ### Authentication
 
