@@ -142,6 +142,12 @@ A collection of AWS blogs that contain helpful tips and tricks.
 | <a href="http://techblog.netflix.com/feeds/posts/default"> <img src="rss.png" width="22" height="22" > </a>                              | **[Netflix Techblog](http://techblog.netflix.com)**       | Learn about Netflix’s world class engineering efforts, company culture, product developments and more.          |
 | <a href="https://www.lastweekinaws.com/feed/"> <img src="rss.png" width="22" height="22" > </a>                                          | **[Last week in AWS](https://www.lastweekinaws.com)**     | We’re the internet’s only snarky, sarcastic resource for literally anything and everything AWS… and we know it. |
 
+---
+
 ## Author
 
 **[Danny Steenman](https://dannys.cloud)**
+
+<p align="left">
+  <a href="https://dannys.cloud/twitter"><img src="https://img.shields.io/twitter/follow/dannysteenman?label=%40dannysteenman&style=social"></a>
+</p>
