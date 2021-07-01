@@ -63,7 +63,8 @@ Review the [Contributing Guidelines](https://github.com/dannysteenman/aws-toolbo
 
 ### IAM scripts
 
-- **[assume_role.sh](iam/assume_role.sh)** - This script uses Simple Token Service (sts) to assume a role (on the destination account).
+- **[assume_role.sh](iam/iam_assume_role.sh)** - This script uses Simple Token Service (sts) to assume a role (on the destination account).
+- **[iam_tag_secrets.py](iam/iam_tag_secrets.py)** - This script allows you to tag all your secrets in AWS Secrets Manager quickly.
 
 ### S3 scripts
 - **[s3_create_tar_file.py](s3/s3_create_tar_file.py)** - Allows you to create tar file creation.
