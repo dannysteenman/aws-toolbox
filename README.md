@@ -13,6 +13,7 @@ A collection of useful Shell & Python scripts that make your DevOps life easier 
   - [Shell & Python scripts categorized by AWS Service](#shell--python-scripts-categorized-by-aws-service)
     - [General scripts](#general-scripts)
     - [CloudWatch scripts](#cloudwatch-scripts)
+    - [CodePipeline](#codepipeline)
     - [EC2 scripts](#ec2-scripts)
     - [IAM scripts](#iam-scripts)
     - [S3 scripts](#s3-scripts)
@@ -49,10 +50,14 @@ Review the [Contributing Guidelines](https://github.com/dannysteenman/aws-toolbo
 ### General scripts
 
 - **[alias](cli/alias)** - This file contains a bunch of easy to remember aliases that runs complex AWS CLI commands.
-- **[boto3_multi_account_execution.py](general/boto3_multi_account_execution.py)** - Gives you the ability to run Boto3 commands on all accounts which are specified in the aws_account_list.
+- **[tag_secrets.py](general/tag_secrets.py)** - This script allows you to tag all your secrets in AWS Secrets Manager quickly.
+- **[multi_account_execution.py](general/multi_account_execution.py)** - Gives you the ability to run Boto3 commands on all accounts which are specified in the aws_account_list.
 
 ### CloudWatch scripts
 - **[cloudwatch_retention_policy.py](cloudwatch/cloudwatch_retention_policy.py)** - Sets a CloudWatch Logs Retention Policy to x number of days for all log groups in the region that you exported in your cli.
+
+### CodePipeline
+- **[codepipeline_slack_notification.py](codepipeline/codepipeline_slack_notification.py)** - Can be used in a lambda to enable AWS CodePipeline notifications on slack in a specific channel.
 
 ### EC2 scripts
 
@@ -64,7 +69,6 @@ Review the [Contributing Guidelines](https://github.com/dannysteenman/aws-toolbo
 ### IAM scripts
 
 - **[iam_assume_role.sh](iam/iam_assume_role.sh)** - This script uses Simple Token Service (sts) to assume a role (on the destination account).
-- **[iam_tag_secrets.py](iam/iam_tag_secrets.py)** - This script allows you to tag all your secrets in AWS Secrets Manager quickly.
 
 ### S3 scripts
 - **[s3_create_tar_file.py](s3/s3_create_tar_file.py)** - Allows you to create tar file creation.

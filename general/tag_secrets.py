@@ -8,7 +8,7 @@ import boto3
 from botocore.exceptions import ClientError
 
 secretsmanager = boto3.client("secretsmanager")
-tags_dict = [{"Key": "copilot-application", "Value": "hello-energy-copilot"}]
+tags_dict = [{"Key": "copilot-environment", "Value": "prod"}]
 
 
 def add_tags_to_secret(secret_name, tags_dict):
