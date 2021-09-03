@@ -18,6 +18,7 @@ A collection of useful Shell & Python scripts that make your DevOps life easier 
     - [IAM scripts](#iam-scripts)
     - [S3 scripts](#s3-scripts)
     - [SSM scripts](#ssm-scripts)
+    - [ECS scripts](#ecs-scripts)
   - [DevOps tools & Resources](#devops-tools--resources)
     - [General](#general)
     - [Authentication](#authentication)
@@ -75,9 +76,13 @@ Review the [Contributing Guidelines](https://github.com/dannysteenman/aws-toolbo
 - **[s3_list_file_older_than_number_of_days.py](s3/s3_list_file_older_than_number_of_days.py)** - Allows you to list all files older than N numbers of days.
 - **[s3_search_file_in_bucket.py](s3/s3_search_file_in_bucket.py)** - Allows you to search file in S3 bucket.
 - **[s3_search_subdirectory.py](s3/s3_search_subdirectory.py)** - Allows you to search subdirectory under nested folder structure.
+
 ### SSM scripts
 - **[ssm_parameter_delete.sh](ssm/ssm_parameter_delete.sh)** - Allows you to delete ssm parameters through a json file.
 - **[ssm_parameter_register.sh](ssm/ssm_parameter_register.sh)** - Allows you to import ssm parameters through a json file.
+
+### ECS scripts
+- **[publish_image_ecr.sh](ecs/publish_image_ecr.sh)** - Build a Docker image and publish it to Amazon ECR.
 
 ## DevOps tools & Resources
 
