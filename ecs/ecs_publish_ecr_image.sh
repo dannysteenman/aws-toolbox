@@ -11,16 +11,16 @@ DOCKER_FILE="./Dockerfile"
 TAG="latest"
 
 usage() {
-   cat << EOF
+    cat <<EOF
 Publish a script to Amazon Elastic Container Registry given a repository URL. The script assumes that the AWS CLI has already
 been configured in the local shell, at least the default profile.
 
 Usage
 -----
-./publish_ecr.sh --ecr-url ecr_repo_url [--dockerfile /path/to/dockerfile] [--profile <aws_profile>] [--tag <docker_image_tag>] [--help]
+./ecs_publish_ecr_image.sh --ecr-url ecr_repo_url [--dockerfile /path/to/dockerfile] [--profile <aws_profile>] [--tag <docker_image_tag>] [--help]
 
 A short version of the commands is also available:
-./publish_ecr.sh -e ecr_repo_url [-d /path/to/dockerfile] [-p <aws_profile>] [-t <docker_image_tag>] [-h]
+./ecs_publish_ecr_image.sh -e ecr_repo_url [-d /path/to/dockerfile] [-p <aws_profile>] [-t <docker_image_tag>] [-h]
 
 Arguments
 ---------
@@ -34,30 +34,34 @@ profiles currently available in your machine)
 EOF
 }
 
-if ! command -v docker &> /dev/null
-then
+if ! command -v docker &>/dev/null; then
     echo "This script requires Docker to be installed and available in the shell PATH!"
     exit
 fi
 
 while [ "$1" != "" ]; do
     case $1 in
-        -p | --profile )    shift
-			    AWS_PROFILE="$1"
-			    ;;
-        -d | --dockerfile ) shift
-			    DOCKER_FILE="$1"
-			    ;;
-        -e | --ecr-url )    shift
-			    ECR_URL="$1"
-			    ;;
-        -t | --tag )        shift
-			    TAG="$1"
-			    ;;
-        -h | --help )       shift
-			    usage
-			    exit 
-			    ;;
+    -p | --profile)
+        shift
+        AWS_PROFILE="$1"
+        ;;
+    -d | --dockerfile)
+        shift
+        DOCKER_FILE="$1"
+        ;;
+    -e | --ecr-url)
+        shift
+        ECR_URL="$1"
+        ;;
+    -t | --tag)
+        shift
+        TAG="$1"
+        ;;
+    -h | --help)
+        shift
+        usage
+        exit
+        ;;
     esac
     shift
 done

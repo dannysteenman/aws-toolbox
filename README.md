@@ -15,10 +15,10 @@ A collection of useful Shell & Python scripts that make your DevOps life easier 
     - [CloudWatch scripts](#cloudwatch-scripts)
     - [CodePipeline](#codepipeline)
     - [EC2 scripts](#ec2-scripts)
+    - [ECS scripts](#ecs-scripts)
     - [IAM scripts](#iam-scripts)
     - [S3 scripts](#s3-scripts)
     - [SSM scripts](#ssm-scripts)
-    - [ECS scripts](#ecs-scripts)
   - [DevOps tools & Resources](#devops-tools--resources)
     - [General](#general)
     - [Authentication](#authentication)
@@ -67,6 +67,9 @@ Review the [Contributing Guidelines](https://github.com/dannysteenman/aws-toolbo
 - **[ec2_req_spot_instances.sh](ec2/ec2_req_spot_instances.sh)** - Enables you to run a request for spot instances.
 - **[ec2_resize_volume.sh](ec2/ec2_resize_volume.sh)** - specifies the desired volume size in GiB as a command line argument. If not specified, default to 20 GiB.
 
+### ECS scripts
+- **[ecs_publish_ecr_image.sh](ecs/ecs_publish_ecr_image.sh)** - Build a Docker image and publish it to Amazon ECR.
+
 ### IAM scripts
 
 - **[iam_assume_role.sh](iam/iam_assume_role.sh)** - This script uses Simple Token Service (sts) to assume a role (on the destination account).
@@ -80,9 +83,6 @@ Review the [Contributing Guidelines](https://github.com/dannysteenman/aws-toolbo
 ### SSM scripts
 - **[ssm_parameter_delete.sh](ssm/ssm_parameter_delete.sh)** - Allows you to delete ssm parameters through a json file.
 - **[ssm_parameter_register.sh](ssm/ssm_parameter_register.sh)** - Allows you to import ssm parameters through a json file.
-
-### ECS scripts
-- **[publish_image_ecr.sh](ecs/publish_image_ecr.sh)** - Build a Docker image and publish it to Amazon ECR.
 
 ## DevOps tools & Resources
 
