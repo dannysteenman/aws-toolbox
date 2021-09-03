@@ -1,7 +1,9 @@
 name: Lint
 # Triggered when code is pushed to any branch in a repository
-on: push
-
+on:
+  push: {}
+  pull_request: {}
+  workflow_dispatch: {}
 jobs:
   run-linters:
     name: Run linters
@@ -24,4 +26,4 @@ jobs:
         with:
           black: true
           flake8: true
-          flake8_args: "--ignore=E203,E266,E501,F401,W503"
+          flake8_args: '--ignore=E203,E266,E501,F401,W503'
