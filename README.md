@@ -72,6 +72,8 @@ Review the [Contributing Guidelines](https://github.com/dannysteenman/aws-toolbo
 
 ### IAM scripts
 
+- **[iam_delete_iam_user](iam/iam_delete_iam_user.py)** - This script deletes iam users.
+- **[iam_key_rotator](iam/iam_key_rotator.py)** - This script rotates IAM user keys.
 - **[iam_assume_role.sh](iam/iam_assume_role.sh)** - This script uses Simple Token Service (sts) to assume a role (on the destination account).
 
 ### S3 scripts
