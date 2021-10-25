@@ -2,7 +2,6 @@ name: Lint
 # Triggered when code is pushed to any branch in a repository
 on:
   push: {}
-  pull_request: {}
   workflow_dispatch: {}
 jobs:
   run-linters:
