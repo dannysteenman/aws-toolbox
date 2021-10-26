@@ -2,7 +2,7 @@
 
 # AWS Toolbox 🧰
 
-A collection of useful Shell & Python scripts that make your DevOps life easier in AWS. Furthermore you'll also find a list of links that point to awesome DevOps tools from other creators.
+A Collection of Awesome Tools and Scripts for Cloud Engineers.
 
 ## Table of Contents
 
