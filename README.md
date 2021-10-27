@@ -8,7 +8,6 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
 
 - [AWS Toolbox 🧰](#aws-toolbox-)
   - [Table of Contents](#table-of-contents)
-  - [Contributing](#contributing)
   - [Getting started](#getting-started)
   - [Shell & Python scripts categorized by AWS Service](#shell--python-scripts-categorized-by-aws-service)
     - [General scripts](#general-scripts)
@@ -31,13 +30,8 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
     - [S3](#s3)
     - [SSM](#ssm)
   - [Blogroll](#blogroll)
+  - [Contributors](#contributors)
   - [Author](#author)
-
-## Contributing
-
-Contributions are welcome!
-
-Review the [Contributing Guidelines](https://github.com/dannysteenman/aws-toolbox/blob/main/.github/CONTRIBUTING.md).
 
 ## Getting started
 
@@ -155,6 +149,14 @@ A collection of AWS blogs that contain helpful tips and tricks.
 | <a href="https://www.lastweekinaws.com/feed/"> <img src="rss.png" width="22" height="22" > </a>                                          | **[Last week in AWS](https://www.lastweekinaws.com)**     | We’re the internet’s only snarky, sarcastic resource for literally anything and everything AWS… and we know it. |
 
 ---
+
+## Contributors
+
+This project exists thanks to all the people who contribute.
+
+[![Code Contributors](https://contrib.rocks/image?repo=dannysteenman/aws-toolbox)](https://github.com/dannysteenman/aws-toolbox/graphs/contributors)
+
+See how you can [contribute to this repository.](https://github.com/dannysteenman/aws-toolbox/blob/main/.github/CONTRIBUTING.md)
 
 ## Author
 
