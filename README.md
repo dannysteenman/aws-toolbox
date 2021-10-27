@@ -19,7 +19,7 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
     - [IAM scripts](#iam-scripts)
     - [S3 scripts](#s3-scripts)
     - [SSM scripts](#ssm-scripts)
-  - [DevOps tools & Resources](#devops-tools--resources)
+  - [Tools](#tools)
     - [General](#general)
     - [Authentication](#authentication)
     - [CI/CD](#cicd)
@@ -86,7 +86,7 @@ Review the [Contributing Guidelines](https://github.com/dannysteenman/aws-toolbo
 - **[ssm_parameter_delete.sh](ssm/ssm_parameter_delete.sh)** - Allows you to delete ssm parameters through a json file.
 - **[ssm_parameter_register.sh](ssm/ssm_parameter_register.sh)** - Allows you to import ssm parameters through a json file.
 
-## DevOps tools & Resources
+## Tools
 
 This list contains links to tools that automate or simplify the usage of AWS in the console, CLI or API's.
 
