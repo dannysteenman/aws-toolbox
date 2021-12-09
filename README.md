@@ -106,6 +106,7 @@ This list contains links to tools that automate or simplify the usage of AWS in 
 
 - **[Awesome ECS](https://github.com/nathanpeck/awesome-ecs)** - A curated list of awesome ECS guides, development tools, and resources.
 - **[AWS Copilot CLI](https://github.com/aws/copilot-cli)** - The AWS Copilot CLI is a tool for developers to build, release and operate production ready containerized applications on Amazon ECS and AWS Fargate.
+- **[ECS Compose-X](https://github.com/compose-x/ecs_composex)** - A python app/lib to use your existing docker-compose files, add CFN resources definitions (or via Discovery) that takes care of all the complexity (IAM, Security Groups, Secrets, Volumes etc.) and generates curated CFN templates to deploy to AWS.
 
 ### IAM
 
