@@ -32,6 +32,7 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
   - [Blogroll](#blogroll)
   - [Contributors](#contributors)
   - [Author](#author)
+  - [Support my work](#support-my-work)
 
 ## Getting started
 
@@ -166,3 +167,11 @@ See how you can [contribute to this repository.](https://github.com/dannysteenma
 <p align="left">
   <a href="https://twitter.com/dannysteenman"><img src="https://img.shields.io/twitter/follow/dannysteenman?label=%40dannysteenman&style=social"></a>
 </p>
+
+---
+
+## Support my work
+
+If you found this project helpful, please consider showing your support by buying me a coffee.
+
+<a href="https://www.buymeacoffee.com/dannysteenman" target="_blank"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=dannysteenman&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"></a>
