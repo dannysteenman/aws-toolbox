@@ -119,8 +119,8 @@ This list contains links to tools that automate or simplify the usage of AWS in 
 - **[Awesome CDK](https://github.com/kolomied/awesome-cdk)** - Curated list of awesome AWS Cloud Development Kit (AWS CDK) open-source projects, guides, blogs and other resources.
 - **[Awesome CloudFormation](https://github.com/aws-cloudformation/awesome-cloudformation)** - A curated list of resources and projects for working with AWS CloudFormation.
 - **[Awesome Terraform](https://github.com/shuaibiyy/awesome-terraform)** - Curated list of resources on HashiCorp's Terraform.
-- **[CDK Snippets](https://towardsthecloud.com/autocomplete-aws-cdk-l1-constructs-vs-code)** - This extension adds L1 construct snippets from CDK into Visual Studio Code.
-- **[CloudFormation Snippets](https://towardsthecloud.com/autocomplete-cloudformation-resources-vs-code)** - This extension adds snippets for all the AWS CloudFormation resources into Visual Studio Code.
+- **[CDK Snippets](https://towardsthecloud.com/blog/autocomplete-aws-cdk-constructs-vscode)** - This extension adds L1 construct snippets from CDK into Visual Studio Code.
+- **[CloudFormation Snippets](https://towardsthecloud.com/blog/autocomplete-cloudformation-resources-vscode)** - This extension adds snippets for all the AWS CloudFormation resources into Visual Studio Code.
 - **[Former2](https://github.com/iann0036/former2)** - Generate CloudFormation / Terraform / Troposphere templates from your existing AWS resources.
 - **[Open CDK Guide](https://github.com/kevinslin/open-cdk)** - This guide is an opinionated set of tips and best practices for working with the AWS Cloud Development Kit.
 
