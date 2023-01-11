@@ -9,7 +9,7 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
 - [AWS Toolbox 🧰](#aws-toolbox-)
   - [Table of Contents](#table-of-contents)
   - [Getting started](#getting-started)
-  - [Shell & Python scripts categorized by AWS Service](#shell--python-scripts-categorized-by-aws-service)
+  - [Shell \& Python scripts categorized by AWS Service](#shell--python-scripts-categorized-by-aws-service)
     - [General scripts](#general-scripts)
     - [CloudWatch scripts](#cloudwatch-scripts)
     - [CodePipeline](#codepipeline)
@@ -73,6 +73,7 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
 
 ### S3 scripts
 - **[s3_create_tar_file.py](s3/s3_create_tar_file.py)** - Allows you to create tar file creation.
+- **[s3_delete_empty_buckets.py](s3/s3_delete_empty_buckets.py)** - Finds empty S3 buckets on your account and deletes them.
 - **[s3_list_file_older_than_number_of_days.py](s3/s3_list_file_older_than_number_of_days.py)** - Allows you to list all files older than N numbers of days.
 - **[s3_search_file_in_bucket.py](s3/s3_search_file_in_bucket.py)** - Allows you to search file in S3 bucket.
 - **[s3_search_subdirectory.py](s3/s3_search_subdirectory.py)** - Allows you to search subdirectory under nested folder structure.
