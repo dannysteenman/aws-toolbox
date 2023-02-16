@@ -57,6 +57,12 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
 
 ### EC2 scripts
 
+- **[ec2_delete_all_unattached_volumes.py](ec2/ec2_delete_all_unattached_volumes.py)** - Deletes all unattached EBS volumes in all AWS Regions
+- **[ec2_delete_all_unused_keypairs.py](ec2/ec2_delete_all_unused_keypairs.py** - Deletes all unused EC2 keypairs in all AWS Region
+- **[ec2_delete_unused_keypairs.py](ec2/ec2_delete_unused_keypairs.py)** - Finds and deletes all unused EC2 keypairs in a single AWS Region
+- **[ec2_find_all_unattached_volumes.py](ec2/ec2_find_all_unattached_volumes.py)** - Finds all unattached EBS volumes in all AWS Regions
+- **[ec2_find_all_unused_keypairs.py](ec2/ec2_find_all_unused_keypairs.py)** - Finds all used and unused EC2 keypairs in all AWS Regions
+- **[ec2_find_unused_keypairs.py](ec2/ec2_find_unused_keypairs.py)** - Finds all used and unused EC2 keypairs in a single region
 - **[ec2_asg_ssh.sh](ec2/ec2_asg_ssh.sh)** - A ssh wrapper for connecting quickly to EC2 instances in an Auto Scaling group.
 - **[ec2_available_eip.sh](ec2/ec2_available_eip.sh)** - Shows Elastic IP addresses which haven't been associated yet.
 - **[ec2_req_spot_instances.sh](ec2/ec2_req_spot_instances.sh)** - Enables you to run a request for spot instances.
