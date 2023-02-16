@@ -45,6 +45,8 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
 
 ### General scripts
 
+- **[delete_unused_security_groups.py](general/delete_unused_security_groups.py)** - Deletes all unused security groups in a single AWS Region
+- **[find_unused_security_groups.py](general/find_unused_security_groups.py)** - Finds all unused security groups in a single AWS Region
 - **[alias](cli/alias)** - This file contains a bunch of easy to remember aliases that runs complex AWS CLI commands.
 - **[tag_secrets.py](general/tag_secrets.py)** - This script allows you to tag all your secrets in AWS Secrets Manager quickly.
 - **[multi_account_execution.py](general/multi_account_execution.py)** - Gives you the ability to run Boto3 commands on all accounts which are specified in the aws_account_list.
