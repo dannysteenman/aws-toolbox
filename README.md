@@ -75,6 +75,7 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
 - **[s3_create_tar_file.py](s3/s3_create_tar_file.py)** - Allows you to create tar file creation.
 - **[s3_delete_empty_buckets.py](s3/s3_delete_empty_buckets.py)** - Finds empty S3 buckets on your account and deletes them.
 - **[s3_list_file_older_than_number_of_days.py](s3/s3_list_file_older_than_number_of_days.py)** - Allows you to list all files older than N numbers of days.
+- **[s3_search_bucket_and_delete.py](s3/s3_search_bucket_and_delete.py)** - Searches for your chosen bucketname and then deletes all (versioned)objects in that S3 bucket before deleting the bucket itself.
 - **[s3_search_file_in_bucket.py](s3/s3_search_file_in_bucket.py)** - Allows you to search file in S3 bucket.
 - **[s3_search_subdirectory.py](s3/s3_search_subdirectory.py)** - Allows you to search subdirectory under nested folder structure.
 
