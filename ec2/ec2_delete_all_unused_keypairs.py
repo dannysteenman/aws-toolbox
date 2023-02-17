@@ -2,7 +2,7 @@
 #
 #  License: MIT
 #
-# This script finds and deletes all unused EC2 keypairs in all AWS Region
+# This script finds and deletes all unused EC2 keypairs in all AWS Regions
 
 import boto3
 

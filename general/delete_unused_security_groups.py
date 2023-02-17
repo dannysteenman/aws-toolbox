@@ -5,6 +5,7 @@
 # This script deletes all unused security groups in a single AWS Region
 
 import boto3
+from botocore.exceptions import ClientError
 
 if __name__ == "__main__":
     ec2 = boto3.client("ec2")
@@ -57,5 +58,13 @@ if __name__ == "__main__":
                 f"Skipping deletion of security group '{sg_name}' (ID: {sg_id}) because it contains 'default'"
             )
         else:
-            print(f"Deleting security group '{sg_name}' (ID: {sg_id})")
-            ec2.delete_security_group(GroupId=sg_id)
+            try:
+                print(f"Deleting security group '{sg_name}' (ID: {sg_id})")
+                ec2.delete_security_group(GroupId=sg_id)
+            except ClientError as e:
+                if e.response["Error"]["Code"] == "DependencyViolation":
+                    print(
+                        f"Skipping deletion of security group '{sg_name}' (ID: {sg_id}) because it has a dependent object."
+                    )
+                else:
+                    raise e
