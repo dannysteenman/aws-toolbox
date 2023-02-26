@@ -17,6 +17,7 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
     - [EC2 scripts](#ec2-scripts)
     - [ECS scripts](#ecs-scripts)
     - [IAM scripts](#iam-scripts)
+    - [Organizations scripts](#organizations-scripts)
     - [S3 scripts](#s3-scripts)
     - [SSM scripts](#ssm-scripts)
   - [Tools](#tools)
@@ -26,7 +27,6 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
     - [EC2](#ec2)
     - [ECS](#ecs)
     - [IAM](#iam)
-    - [Organizations scripts](#organizations-scripts)
     - [Infra as Code](#infra-as-code)
     - [Lambda](#lambda)
     - [S3](#s3)
@@ -58,45 +58,49 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
 **[delete_stackset.py](cloudformation/delete_stackset.py)** - Deletes all stack instances associated with a stackset and the stackset itself
 
 ### CloudWatch scripts
-- **[cloudwatch_retention_policy.py](cloudwatch/cloudwatch_retention_policy.py)** - Sets a CloudWatch Logs Retention Policy to x number of days for all log groups in the region that you exported in your cli.
+- **[log_retention_policy.py](cloudwatch/log_retention_policy.py)** - Sets a CloudWatch Logs Retention Policy to x number of days for all log groups in the region that you exported in your cli.
 
 ### CodePipeline
-- **[codepipeline_slack_notification.py](codepipeline/codepipeline_slack_notification.py)** - Can be used in a lambda to enable AWS CodePipeline notifications on slack in a specific channel.
+- **[slack_notification.py](codepipeline/slack_notification.py)** - Can be used in a lambda to enable AWS CodePipeline notifications on slack in a specific channel.
 
 ### EC2 scripts
 
-- **[ec2_delete_all_unattached_volumes.py](ec2/ec2_delete_all_unattached_volumes.py)** - Deletes all unattached EBS volumes in all AWS Regions
-- **[ec2_delete_all_unused_elastic_ips.py](ec2/ec2_delete_all_unused_elastic_ips.py)** - Finds and deletes all unused Elastic IPs in all AWS Regions
-- **[ec2_delete_all_unused_keypairs.py](ec2/ec2_delete_all_unused_keypairs.py)** - Deletes all unused EC2 keypairs in all AWS Region
-- **[ec2_delete_unused_keypairs.py](ec2/ec2_delete_unused_keypairs.py)** - Finds and deletes all unused EC2 keypairs in a single AWS Region
-- **[ec2_find_all_unattached_volumes.py](ec2/ec2_find_all_unattached_volumes.py)** - Finds all unattached EBS volumes in all AWS Regions
-- **[ec2_find_all_unused_keypairs.py](ec2/ec2_find_all_unused_keypairs.py)** - Finds all used and unused EC2 keypairs in all AWS Regions
-- **[ec2_find_unused_keypairs.py](ec2/ec2_find_unused_keypairs.py)** - Finds all used and unused EC2 keypairs in a single region
-- **[ec2_asg_ssh.sh](ec2/ec2_asg_ssh.sh)** - A ssh wrapper for connecting quickly to EC2 instances in an Auto Scaling group.
-- **[ec2_available_eip.sh](ec2/ec2_available_eip.sh)** - Shows Elastic IP addresses which haven't been associated yet.
-- **[ec2_req_spot_instances.sh](ec2/ec2_req_spot_instances.sh)** - Enables you to run a request for spot instances.
-- **[ec2_resize_volume.sh](ec2/ec2_resize_volume.sh)** - specifies the desired volume size in GiB as a command line argument. If not specified, default to 20 GiB.
+- **[delete_all_unattached_volumes.py](ec2/delete_all_unattached_volumes.py)** - Deletes all unattached EBS volumes in all AWS Regions
+- **[delete_all_unused_elastic_ips.py](ec2/delete_all_unused_elastic_ips.py)** - Finds and deletes all unused Elastic IPs in all AWS Regions
+- **[delete_all_unused_keypairs.py](ec2/delete_all_unused_keypairs.py)** - Deletes all unused EC2 keypairs in all AWS Region
+- **[delete_unused_keypairs.py](ec2/delete_unused_keypairs.py)** - Finds and deletes all unused EC2 keypairs in a single AWS Region
+- **[find_all_unattached_volumes.py](ec2/find_all_unattached_volumes.py)** - Finds all unattached EBS volumes in all AWS Regions
+- **[find_all_unused_keypairs.py](ec2/find_all_unused_keypairs.py)** - Finds all used and unused EC2 keypairs in all AWS Regions
+- **[find_unused_keypairs.py](ec2/find_unused_keypairs.py)** - Finds all used and unused EC2 keypairs in a single region
+- **[asg_ssh.sh](ec2/asg_ssh.sh)** - A ssh wrapper for connecting quickly to EC2 instances in an Auto Scaling group.
+- **[available_eip.sh](ec2/available_eip.sh)** - Shows Elastic IP addresses which haven't been associated yet.
+- **[req_spot_instances.sh](ec2/req_spot_instances.sh)** - Enables you to run a request for spot instances.
+- **[resize_volume.sh](ec2/resize_volume.sh)** - specifies the desired volume size in GiB as a command line argument. If not specified, default to 20 GiB.
 
 ### ECS scripts
-- **[ecs_publish_ecr_image.sh](ecs/ecs_publish_ecr_image.sh)** - Build a Docker image and publish it to Amazon ECR.
+- **[publish_ecr_image.sh](ecs/publish_ecr_image.sh)** - Build a Docker image and publish it to Amazon ECR.
 
 ### IAM scripts
 
-- **[iam_delete_iam_user](iam/iam_delete_iam_user.py)** - This script deletes iam users.
-- **[iam_key_rotator](iam/iam_key_rotator.py)** - This script rotates IAM user keys.
-- **[iam_assume_role.sh](iam/iam_assume_role.sh)** - This script uses Simple Token Service (sts) to assume a role (on the destination account).
+- **[delete_iam_user](iam/delete_iam_user.py)** - This script deletes iam users.
+- **[key_rotator](iam/key_rotator.py)** - This script rotates IAM user keys.
+- **[assume_role.sh](iam/assume_role.sh)** - This script uses Simple Token Service (sts) to assume a role (on the destination account).
+
+### Organizations scripts
+
+- **[find_accounts_by_ou_name.py](organizations/find_accounts_by_ou_name.py)** - Returns a list of acounts that are part of an Organizational Unit (OU)
 
 ### S3 scripts
-- **[s3_create_tar_file.py](s3/s3_create_tar_file.py)** - Allows you to create tar file creation.
-- **[s3_delete_empty_buckets.py](s3/s3_delete_empty_buckets.py)** - Finds empty S3 buckets on your account and deletes them.
-- **[s3_list_file_older_than_number_of_days.py](s3/s3_list_file_older_than_number_of_days.py)** - Allows you to list all files older than N numbers of days.
-- **[s3_search_bucket_and_delete.py](s3/s3_search_bucket_and_delete.py)** - Searches for your chosen bucketname and then deletes all (versioned)objects in that S3 bucket before deleting the bucket itself.
-- **[s3_search_file_in_bucket.py](s3/s3_search_file_in_bucket.py)** - Allows you to search file in S3 bucket.
-- **[s3_search_subdirectory.py](s3/s3_search_subdirectory.py)** - Allows you to search subdirectory under nested folder structure.
+- **[create_tar_file.py](s3/create_tar_file.py)** - Allows you to create tar file creation.
+- **[delete_empty_buckets.py](s3/delete_empty_buckets.py)** - Finds empty S3 buckets on your account and deletes them.
+- **[list_file_older_than_number_of_days.py](s3/list_file_older_than_number_of_days.py)** - Allows you to list all files older than N numbers of days.
+- **[search_bucket_and_delete.py](s3/search_bucket_and_delete.py)** - Searches for your chosen bucketname and then deletes all (versioned)objects in that S3 bucket before deleting the bucket itself.
+- **[search_file_in_bucket.py](s3/search_file_in_bucket.py)** - Allows you to search file in S3 bucket.
+- **[search_subdirectory.py](s3/search_subdirectory.py)** - Allows you to search subdirectory under nested folder structure.
 
 ### SSM scripts
-- **[ssm_parameter_delete.sh](ssm/ssm_parameter_delete.sh)** - Allows you to delete ssm parameters through a json file.
-- **[ssm_parameter_register.sh](ssm/ssm_parameter_register.sh)** - Allows you to import ssm parameters through a json file.
+- **[parameter_delete.sh](ssm/parameter_delete.sh)** - Allows you to delete ssm parameters through a json file.
+- **[parameter_register.sh](ssm/parameter_register.sh)** - Allows you to import ssm parameters through a json file.
 
 ## Tools
 
@@ -130,10 +134,6 @@ This list contains links to tools that automate or simplify the usage of AWS in 
 
 - **[IAM Floyd](https://github.com/udondan/iam-floyd)** - AWS IAM policy statement generator with fluent interface.
 - **[IAM Zero](https://iamzero.dev)** - IAM Zero detects identity and access management issues and automatically suggests least-privilege policies.
-
-### Organizations scripts
-
-- **[find_accounts_by_ou_name.py](organizations/find_accounts_by_ou_name.py)** - Returns a list of acounts that are part of an Organizational Unit (OU)
 
 ### Infra as Code
 
