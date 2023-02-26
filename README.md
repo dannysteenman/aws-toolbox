@@ -11,6 +11,7 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
   - [Getting started](#getting-started)
   - [Shell \& Python scripts categorized by AWS Service](#shell--python-scripts-categorized-by-aws-service)
     - [General scripts](#general-scripts)
+    - [CloudFormation scripts](#cloudformation-scripts)
     - [CloudWatch scripts](#cloudwatch-scripts)
     - [CodePipeline](#codepipeline)
     - [EC2 scripts](#ec2-scripts)
@@ -25,6 +26,7 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
     - [EC2](#ec2)
     - [ECS](#ecs)
     - [IAM](#iam)
+    - [Organizations scripts](#organizations-scripts)
     - [Infra as Code](#infra-as-code)
     - [Lambda](#lambda)
     - [S3](#s3)
@@ -50,6 +52,10 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
 - **[alias](cli/alias)** - This file contains a bunch of easy to remember aliases that runs complex AWS CLI commands.
 - **[tag_secrets.py](general/tag_secrets.py)** - This script allows you to tag all your secrets in AWS Secrets Manager quickly.
 - **[multi_account_execution.py](general/multi_account_execution.py)** - Gives you the ability to run Boto3 commands on all accounts which are specified in the aws_account_list.
+
+### CloudFormation scripts
+
+**[delete_stackset.py](cloudformation/delete_stackset.py)** - Deletes all stack instances associated with a stackset and the stackset itself
 
 ### CloudWatch scripts
 - **[cloudwatch_retention_policy.py](cloudwatch/cloudwatch_retention_policy.py)** - Sets a CloudWatch Logs Retention Policy to x number of days for all log groups in the region that you exported in your cli.
@@ -124,6 +130,10 @@ This list contains links to tools that automate or simplify the usage of AWS in 
 
 - **[IAM Floyd](https://github.com/udondan/iam-floyd)** - AWS IAM policy statement generator with fluent interface.
 - **[IAM Zero](https://iamzero.dev)** - IAM Zero detects identity and access management issues and automatically suggests least-privilege policies.
+
+### Organizations scripts
+
+- **[find_accounts_by_ou_name.py](organizations/find_accounts_by_ou_name.py)** - Returns a list of acounts that are part of an Organizational Unit (OU)
 
 ### Infra as Code
 
