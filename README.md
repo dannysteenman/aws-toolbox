@@ -22,7 +22,6 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
     - [SSM scripts](#ssm-scripts)
   - [Tools](#tools)
     - [General](#general)
-    - [Authentication](#authentication)
     - [CI/CD](#cicd)
     - [EC2](#ec2)
     - [ECS](#ecs)
@@ -30,8 +29,8 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
     - [Infra as Code](#infra-as-code)
     - [Lambda](#lambda)
     - [S3](#s3)
+    - [Security](#security)
     - [SSM](#ssm)
-  - [Blogroll](#blogroll)
   - [Contributors](#contributors)
   - [Author](#author)
   - [Support my work](#support-my-work)
@@ -55,7 +54,7 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
 
 ### CloudFormation scripts
 
-**[delete_stackset.py](cloudformation/delete_stackset.py)** - Deletes all stack instances associated with a stackset and the stackset itself
+- **[delete_stackset.py](cloudformation/delete_stackset.py)** - Deletes all stack instances associated with a stackset and the stackset itself
 
 ### CloudWatch scripts
 - **[log_retention_policy.py](cloudwatch/log_retention_policy.py)** - Sets a CloudWatch Logs Retention Policy to x number of days for all log groups in the region that you exported in your cli.
@@ -78,6 +77,7 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
 - **[resize_volume.sh](ec2/resize_volume.sh)** - specifies the desired volume size in GiB as a command line argument. If not specified, default to 20 GiB.
 
 ### ECS scripts
+- **[delete_all_inactive_task_definitions.py](ecs/delete_all_inactive_task_definitions.py)** - Deletes all inactive task definitions in the ECS service in all AWS Regions.
 - **[publish_ecr_image.sh](ecs/publish_ecr_image.sh)** - Build a Docker image and publish it to Amazon ECR.
 
 ### IAM scripts
@@ -110,11 +110,6 @@ This list contains links to tools that automate or simplify the usage of AWS in 
 
 - **[Steampipe](https://github.com/turbot/steampipe)** - Query AWS resources in a SQL like fashion.
 - **[AWS Nuke](https://github.com/rebuy-de/aws-nuke)** - Remove all resources from an AWS account.
-- **[AWS Security Tools](https://github.com/0xVariable/AWS-Security-Tools)** - A curated list of Security tools that you can use on AWS.
-
-### Authentication
-
-- **[Leapp](https://github.com/Noovolari/leapp)** - Cross-platform APP to manage Programmatic access in AWS.
 
 ### CI/CD
 
@@ -155,21 +150,16 @@ This list contains links to tools that automate or simplify the usage of AWS in 
 
 - **[s3s3mirror](https://github.com/cobbzilla/s3s3mirror)** - A lightning-fast and highly concurrent utility for mirroring content from one S3 bucket to another.
 
+### Security
+
+- **[Leapp](https://github.com/Noovolari/leapp)** - Cross-platform APP to manage Programmatic access in AWS.
+- **[Prowler](https://github.com/prowler-cloud/prowler)** - Prowler is an Open Source Security tool to perform Cloud Security best practices assessments, audits, incident response, continuous monitoring, hardening and forensics readiness.
+- **[AWS Security Tools](https://github.com/0xVariable/AWS-Security-Tools)** - A curated list of Security tools that you can use on AWS.
+
 ### SSM
 
 - **[aws-gate](https://github.com/xen0l/aws-gate)** - A Better AWS SSM Session manager CLI client.
 - **[aws-ssm-ec2-proxy-command](https://github.com/qoomon/aws-ssm-ec2-proxy-command)** - Open an SSH connection to your ec2 instances via AWS SSM without the need to open any ssh port in you security groups.
-
-## Blogroll
-
-A collection of AWS blogs that contain helpful tips and tricks.
-
-| RSS                                                                                                                                      | Blog title                                                | Description                                                                                                     |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| <a href="http://blogs.aws.amazon.com/security/blog/feed/recentPosts.rss"> <img src="rss.png" width="22" height="22" > </a>               | **[AWS Security](https://aws.amazon.com/blogs/security)** | The latest AWS security, identity, and compliance launches, announcements, and how-to posts.                    |
-| <a href="http://blogs.aws.amazon.com/application-management/blog/feed/recentPosts.rss"> <img src="rss.png" width="22" height="22" > </a> | **[AWS DevOps](https://aws.amazon.com/blogs/devops)**     | The latest AWS DevOps announcements, and how-to posts.                                                          |
-| <a href="http://techblog.netflix.com/feeds/posts/default"> <img src="rss.png" width="22" height="22" > </a>                              | **[Netflix Techblog](http://techblog.netflix.com)**       | Learn about Netflix’s world class engineering efforts, company culture, product developments and more.          |
-| <a href="https://www.lastweekinaws.com/feed/"> <img src="rss.png" width="22" height="22" > </a>                                          | **[Last week in AWS](https://www.lastweekinaws.com)**     | We’re the internet’s only snarky, sarcastic resource for literally anything and everything AWS… and we know it. |
 
 ---
 
