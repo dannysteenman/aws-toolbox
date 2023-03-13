@@ -57,7 +57,7 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
 - **[delete_stackset.py](cloudformation/delete_stackset.py)** - Deletes all stack instances associated with a stackset and the stackset itself
 
 ### CloudWatch scripts
-- **[log_retention_policy.py](cloudwatch/log_retention_policy.py)** - Sets a CloudWatch Logs Retention Policy to x number of days for all log groups in the region that you exported in your cli.
+- **[set_cloudwatch_logs_retention.py](cloudwatch/set_cloudwatch_logs_retention.py)** - Sets a CloudWatch Logs Retention Policy to x number of days for all log groups in the region that you exported in your cli.
 
 ### CodePipeline
 - **[slack_notification.py](codepipeline/slack_notification.py)** - Can be used in a lambda to enable AWS CodePipeline notifications on slack in a specific channel.
