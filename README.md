@@ -88,7 +88,10 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
 
 ### Organizations scripts
 
-- **[find_accounts_by_ou_name.py](organizations/find_accounts_by_ou_name.py)** - Returns a list of acounts that are part of an Organizational Unit (OU)
+- **[assign_sso_access_by_ou.py](organizations/assign_sso_access_by_ou.py)** - Assigns AWS Single Sign-On (SSO) access to a specified principal (user or group) for multiple AWS accounts within a specified Organizational Unit (OU).
+- **[list_accounts_by_ou.py](organizations/list_accounts_by_ou.py)** - Returns a list of acounts that are part of an Organizational Unit (OU)
+- **[list_accounts_sso_assignments.py](organizations/list_accounts_sso_assignments.py)** - The script lists all AWS accounts along with their assigned users, groups, and permission sets in a structured JSON format.
+- **[remove_sso_access_by_ou.py](organizations/remove_sso_access_by_ou.py)** - Removes AWS Single Sign-On (SSO) access to a specified principal (user or group) for multiple AWS accounts within a specified Organizational Unit (OU).
 
 ### S3 scripts
 - **[create_tar_file.py](s3/create_tar_file.py)** - Allows you to create tar file creation.
