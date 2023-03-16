@@ -17,7 +17,7 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
     - [EC2 scripts](#ec2-scripts)
     - [ECS scripts](#ecs-scripts)
     - [IAM scripts](#iam-scripts)
-    - [Organizations scripts](#organizations-scripts)
+    - [Organizations \& IAM Identity Center scripts](#organizations--iam-identity-center-scripts)
     - [S3 scripts](#s3-scripts)
     - [SSM scripts](#ssm-scripts)
   - [Tools](#tools)
@@ -86,9 +86,10 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
 - **[key_rotator](iam/key_rotator.py)** - This script rotates IAM user keys.
 - **[assume_role.sh](iam/assume_role.sh)** - This script uses Simple Token Service (sts) to assume a role (on the destination account).
 
-### Organizations scripts
+### Organizations & IAM Identity Center scripts
 
 - **[assign_sso_access_by_ou.py](organizations/assign_sso_access_by_ou.py)** - Assigns AWS Single Sign-On (SSO) access to a specified principal (user or group) for multiple AWS accounts within a specified Organizational Unit (OU).
+- **[import_users_to_aws_sso.py](organizations/import_users_to_aws_sso.py)** - Imports users and groups from a CSV file into AWS SSO and adding the users to their respective groups.
 - **[list_accounts_by_ou.py](organizations/list_accounts_by_ou.py)** - Returns a list of acounts that are part of an Organizational Unit (OU)
 - **[list_accounts_sso_assignments.py](organizations/list_accounts_sso_assignments.py)** - The script lists all AWS accounts along with their assigned users, groups, and permission sets in a structured JSON format.
 - **[remove_sso_access_by_ou.py](organizations/remove_sso_access_by_ou.py)** - Removes AWS Single Sign-On (SSO) access to a specified principal (user or group) for multiple AWS accounts within a specified Organizational Unit (OU).
