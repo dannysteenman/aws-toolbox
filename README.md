@@ -164,6 +164,7 @@ This list contains links to tools that automate or simplify the usage of AWS in 
 
 - **[aws-gate](https://github.com/xen0l/aws-gate)** - A Better AWS SSM Session manager CLI client.
 - **[aws-ssm-ec2-proxy-command](https://github.com/qoomon/aws-ssm-ec2-proxy-command)** - Open an SSH connection to your ec2 instances via AWS SSM without the need to open any ssh port in you security groups.
+- **[HQarroum/ssm-supercharged](https://github.com/HQarroum/ssm-supercharged)** - AWS SSM integration with OpenSSH + EC2 Instance Connect + sshuttle.
 
 ---
 
