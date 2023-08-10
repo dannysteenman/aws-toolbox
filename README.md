@@ -100,6 +100,8 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
 - **[list_file_older_than_number_of_days.py](s3/list_file_older_than_number_of_days.py)** - Allows you to list all files older than N numbers of days.
 - **[search_bucket_and_delete.py](s3/search_bucket_and_delete.py)** - Searches for your chosen bucketname and then deletes all (versioned)objects in that S3 bucket before deleting the bucket itself.
 - **[search_file_in_bucket.py](s3/search_file_in_bucket.py)** - Allows you to search file in S3 bucket.
+- **[search_key_bucket.py](s3/search_key_bucket.py)** - Searches for a single keys/object in an S3 bucket and let's you know wether it exists or not.
+- **[search_multiple_keys_bucket.py](s3/search_multiple_keys_bucket.py)** - Searches for multiple keys/objects in an S3 bucket and let's you know wether it exists or not.
 - **[search_subdirectory.py](s3/search_subdirectory.py)** - Allows you to search subdirectory under nested folder structure.
 
 ### SSM scripts
