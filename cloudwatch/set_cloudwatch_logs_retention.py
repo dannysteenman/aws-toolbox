@@ -19,8 +19,8 @@ def get_cloudwatch_log_groups():
 
         cloudwatch_log_groups += [log_group for log_group in response["logGroups"]]
 
-        if "NextToken" in response:
-            kwargs["NextToken"] = response["NextToken"]
+        if "nextToken" in response:
+            kwargs["nextToken"] = response["nextToken"]
         else:
             break
 
