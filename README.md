@@ -116,6 +116,7 @@ This list contains links to tools that automate or simplify the usage of AWS in 
 
 - **[Steampipe](https://github.com/turbot/steampipe)** - Query AWS resources in a SQL like fashion.
 - **[AWS Nuke](https://github.com/rebuy-de/aws-nuke)** - Remove all resources from an AWS account.
+- **[aws-list-resources](https://github.com/welldone-cloud/aws-list-resources)** - Lists all resources in an AWS account.
 
 ### CI/CD
 
