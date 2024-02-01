@@ -16,6 +16,7 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
     - [CodePipeline](#codepipeline)
     - [EC2 scripts](#ec2-scripts)
     - [ECS scripts](#ecs-scripts)
+    - [EFS scripts](#efs-scripts)
     - [IAM scripts](#iam-scripts)
     - [Organizations \& IAM Identity Center scripts](#organizations--iam-identity-center-scripts)
     - [S3 scripts](#s3-scripts)
@@ -68,6 +69,7 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
 - **[delete_all_unused_elastic_ips.py](ec2/delete_all_unused_elastic_ips.py)** - Finds and deletes all unused Elastic IPs in all AWS Regions
 - **[delete_all_unused_keypairs.py](ec2/delete_all_unused_keypairs.py)** - Deletes all unused EC2 keypairs in all AWS Region
 - **[delete_unused_keypairs.py](ec2/delete_unused_keypairs.py)** - Finds and deletes all unused EC2 keypairs in a single AWS Region
+- **[delete_tagged_security_groups.py](ec2/delete_tagged_security_groups.py)** - Finds and deletes all tagged security groups including in- and outbound rules
 - **[find_all_unattached_volumes.py](ec2/find_all_unattached_volumes.py)** - Finds all unattached EBS volumes in all AWS Regions
 - **[find_all_unused_keypairs.py](ec2/find_all_unused_keypairs.py)** - Finds all used and unused EC2 keypairs in all AWS Regions
 - **[find_unused_keypairs.py](ec2/find_unused_keypairs.py)** - Finds all used and unused EC2 keypairs in a single region
@@ -79,6 +81,9 @@ A Collection of Awesome Tools and Scripts for Cloud Engineers.
 ### ECS scripts
 - **[delete_all_inactive_task_definitions.py](ecs/delete_all_inactive_task_definitions.py)** - Deletes all inactive task definitions in the ECS service in all AWS Regions.
 - **[publish_ecr_image.sh](ecs/publish_ecr_image.sh)** - Build a Docker image and publish it to Amazon ECR.
+
+### EFS scripts
+- **[delete_tagged_efs.py](efs/delete_tagged_efs.py)** - Finds and deletes all tagged elastic file systems including mount targets
 
 ### IAM scripts
 
