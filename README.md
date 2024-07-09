@@ -2,7 +2,16 @@
 
 # AWS Toolbox 🧰
 
-This repository contains a collection of awesome tools and scripts for Developers and Engineers seeking to automate routine tasks on AWS Cloud.
+Scripts and tools for AWS cloud automation.
+
+## Overview
+
+This repository contains scripts for AWS Developers, DevOps Engineers, and Cloud Architects. Tools focus on task automation and infrastructure management.
+
+## Usage
+
+Navigate to the relevant AWS service section. Click on the script name in the table below to open the content and usage instructions.
+
 
 > [!TIP]
 > Struggling with AWS complexity or stuck on-premise? Let's transform your cloud journey.
@@ -31,120 +40,107 @@ This repository contains a collection of awesome tools and scripts for Developer
 > <a href="https://towardsthecloud.com/contact"><img alt="Schedule your call" src="https://img.shields.io/badge/schedule%20your%20call-success.svg?style=for-the-badge"/></a>
 > </details>
 
-## Python and Bash Scripts, Sorted by AWS Service
+## AWS Service Management Scripts
 
-### CloudFormation scripts
-- **[delete_stackset.py](cloudformation/delete_stackset.py)** - Deletes all stack instances associated with a stackset and the stackset itself
+This collection includes Python and Bash scripts for managing various AWS services. The scripts are organized by service for easy navigation.
 
-### CloudWatch scripts
-- **[set_cloudwatch_logs_retention.py](cloudwatch/set_cloudwatch_logs_retention.py)** - Sets a CloudWatch Logs Retention Policy to x number of days for all log groups in the region that you exported in your cli.
+| Service             | Script Name                                                                            | Description                                     |
+| ------------------- | -------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| CloudFormation      | [delete_stackset.py](cloudformation/delete_stackset.py)                                | Deletes stackset and associated stack instances |
+| CloudWatch          | [delete_cloudwatch_log_groups.py](cloudwatch/delete_cloudwatch_log_groups.py)          | Deletes CloudWatch log groups based on age      |
+| CloudWatch          | [set_cloudwatch_logs_retention.py](cloudwatch/set_cloudwatch_logs_retention.py)        | Sets retention policy for CloudWatch log groups |
+| CodePipeline        | [slack_notification.py](codepipeline/slack_notification.py)                            | Enables CodePipeline notifications on Slack     |
+| EC2                 | [delete_all_unattached_volumes.py](ec2/delete_all_unattached_volumes.py)               | Deletes unattached EBS volumes                  |
+| EC2                 | [delete_all_unused_elastic_ips.py](ec2/delete_all_unused_elastic_ips.py)               | Deletes unused Elastic IPs                      |
+| EC2                 | [delete_all_unused_keypairs.py](ec2/delete_all_unused_keypairs.py)                     | Deletes unused EC2 keypairs                     |
+| EC2                 | [delete_unused_keypairs.py](ec2/delete_unused_keypairs.py)                             | Deletes unused EC2 keypairs in a single region  |
+| EC2                 | [delete_tagged_security_groups.py](ec2/delete_tagged_security_groups.py)               | Deletes tagged security groups                  |
+| EC2                 | [find_all_unattached_volumes.py](ec2/find_all_unattached_volumes.py)                   | Finds unattached EBS volumes                    |
+| EC2                 | [find_all_unused_keypairs.py](ec2/find_all_unused_keypairs.py)                         | Finds all EC2 keypairs                          |
+| EC2                 | [find_unused_keypairs.py](ec2/find_unused_keypairs.py)                                 | Finds EC2 keypairs in a single region           |
+| EC2                 | [asg_ssh.sh](ec2/asg_ssh.sh)                                                           | SSH wrapper for Auto Scaling group instances    |
+| EC2                 | [available_eip.sh](ec2/available_eip.sh)                                               | Lists unassociated Elastic IPs                  |
+| EC2                 | [req_spot_instances.sh](ec2/req_spot_instances.sh)                                     | Requests spot instances                         |
+| EC2                 | [resize_volume.sh](ec2/resize_volume.sh)                                               | Resizes EBS volume                              |
+| ECS                 | [delete_all_inactive_task_definitions.py](ecs/delete_all_inactive_task_definitions.py) | Deletes inactive ECS task definitions           |
+| ECS                 | [publish_ecr_image.sh](ecs/publish_ecr_image.sh)                                       | Publishes Docker image to ECR                   |
+| EFS                 | [delete_tagged_efs.py](efs/delete_tagged_efs.py)                                       | Deletes tagged EFS and mount targets            |
+| IAM                 | [delete_iam_user](iam/delete_iam_user.py)                                              | Deletes IAM users                               |
+| IAM                 | [key_rotator](iam/key_rotator.py)                                                      | Rotates IAM user keys                           |
+| IAM                 | [assume_role.sh](iam/assume_role.sh)                                                   | Assumes IAM role                                |
+| IAM Identity Center | [assign_sso_access_by_ou.py](organizations/assign_sso_access_by_ou.py)                 | Assigns SSO access for accounts in an OU        |
+| IAM Identity Center | [import_users_to_aws_sso.py](organizations/import_users_to_aws_sso.py)                 | Imports users/groups to AWS SSO                 |
+| Organizations       | [list_accounts_sso_assignments.py](organizations/list_accounts_sso_assignments.py)     | Lists SSO assignments for accounts              |
+| Organizations       | [list_accounts_by_ou.py](organizations/list_accounts_by_ou.py)                         | Lists accounts in an OU                         |
+| Organizations       | [remove_sso_access_by_ou.py](organizations/remove_sso_access_by_ou.py)                 | Removes SSO access for accounts in an OU        |
+| S3                  | [create_tar_file.py](s3/create_tar_file.py)                                            | Creates tar files                               |
+| S3                  | [delete_empty_buckets.py](s3/delete_empty_buckets.py)                                  | Deletes empty S3 buckets                        |
+| S3                  | [list_file_older_than_number_of_days.py](s3/list_file_older_than_number_of_days.py)    | Lists old files in S3                           |
+| S3                  | [search_bucket_and_delete.py](s3/search_bucket_and_delete.py)                          | Deletes S3 bucket and its contents              |
+| S3                  | [search_file_in_bucket.py](s3/search_file_in_bucket.py)                                | Searches for files in S3 bucket                 |
+| S3                  | [search_key_bucket.py](s3/search_key_bucket.py)                                        | Searches for a key in S3 bucket                 |
+| S3                  | [search_multiple_keys_bucket.py](s3/search_multiple_keys_bucket.py)                    | Searches for multiple keys in S3 bucket         |
+| S3                  | [search_subdirectory.py](s3/search_subdirectory.py)                                    | Searches subdirectories in S3                   |
+| SSM                 | [parameter_delete.sh](ssm/parameter_delete.sh)                                         | Deletes SSM parameters                          |
+| SSM                 | [parameter_register.sh](ssm/parameter_register.sh)                                     | Imports SSM parameters                          |
+| Other               | [delete_unused_security_groups.py](general/delete_unused_security_groups.py)           | Deletes unused security groups                  |
+| Other               | [find_unused_security_groups.py](general/find_unused_security_groups.py)               | Finds unused security groups                    |
+| Other               | [alias](cli/alias)                                                                     | AWS CLI command aliases                         |
+| Other               | [tag_secrets.py](general/tag_secrets.py)                                               | Tags Secrets Manager secrets                    |
+| Other               | [multi_account_execution.py](general/multi_account_execution.py)                       | Runs commands across multiple AWS accounts      |
 
-### CodePipeline scripts
-- **[slack_notification.py](codepipeline/slack_notification.py)** - Can be used in a lambda to enable AWS CodePipeline notifications on slack in a specific channel.
-
-### EC2 scripts
-- **[delete_all_unattached_volumes.py](ec2/delete_all_unattached_volumes.py)** - Deletes all unattached EBS volumes in all AWS Regions
-- **[delete_all_unused_elastic_ips.py](ec2/delete_all_unused_elastic_ips.py)** - Finds and deletes all unused Elastic IPs in all AWS Regions
-- **[delete_all_unused_keypairs.py](ec2/delete_all_unused_keypairs.py)** - Deletes all unused EC2 keypairs in all AWS Region
-- **[delete_unused_keypairs.py](ec2/delete_unused_keypairs.py)** - Finds and deletes all unused EC2 keypairs in a single AWS Region
-- **[delete_tagged_security_groups.py](ec2/delete_tagged_security_groups.py)** - Finds and deletes all tagged security groups including in- and outbound rules
-- **[find_all_unattached_volumes.py](ec2/find_all_unattached_volumes.py)** - Finds all unattached EBS volumes in all AWS Regions
-- **[find_all_unused_keypairs.py](ec2/find_all_unused_keypairs.py)** - Finds all used and unused EC2 keypairs in all AWS Regions
-- **[find_unused_keypairs.py](ec2/find_unused_keypairs.py)** - Finds all used and unused EC2 keypairs in a single region
-- **[asg_ssh.sh](ec2/asg_ssh.sh)** - A ssh wrapper for connecting quickly to EC2 instances in an Auto Scaling group.
-- **[available_eip.sh](ec2/available_eip.sh)** - Shows Elastic IP addresses which haven't been associated yet.
-- **[req_spot_instances.sh](ec2/req_spot_instances.sh)** - Enables you to run a request for spot instances.
-- **[resize_volume.sh](ec2/resize_volume.sh)** - specifies the desired volume size in GiB as a command line argument. If not specified, default to 20 GiB.
-
-### ECS scripts
-- **[delete_all_inactive_task_definitions.py](ecs/delete_all_inactive_task_definitions.py)** - Deletes all inactive task definitions in the ECS service in all AWS Regions.
-- **[publish_ecr_image.sh](ecs/publish_ecr_image.sh)** - Build a Docker image and publish it to Amazon ECR.
-
-### EFS scripts
-- **[delete_tagged_efs.py](efs/delete_tagged_efs.py)** - Finds and deletes all tagged elastic file systems including mount targets
-
-### IAM scripts
-- **[delete_iam_user](iam/delete_iam_user.py)** - This script deletes iam users.
-- **[key_rotator](iam/key_rotator.py)** - This script rotates IAM user keys.
-- **[assume_role.sh](iam/assume_role.sh)** - This script uses Simple Token Service (sts) to assume a role (on the destination account).
-
-### Organizations & IAM Identity Center scripts
-- **[assign_sso_access_by_ou.py](organizations/assign_sso_access_by_ou.py)** - Assigns AWS Single Sign-On (SSO) access to a specified principal (user or group) for multiple AWS accounts within a specified Organizational Unit (OU).
-- **[import_users_to_aws_sso.py](organizations/import_users_to_aws_sso.py)** - Imports users and groups from a CSV file into AWS SSO and adding the users to their respective groups.
-- **[list_accounts_by_ou.py](organizations/list_accounts_by_ou.py)** - Returns a list of acounts that are part of an Organizational Unit (OU)
-- **[list_accounts_sso_assignments.py](organizations/list_accounts_sso_assignments.py)** - The script lists all AWS accounts along with their assigned users, groups, and permission sets in a structured JSON format.
-- **[remove_sso_access_by_ou.py](organizations/remove_sso_access_by_ou.py)** - Removes AWS Single Sign-On (SSO) access to a specified principal (user or group) for multiple AWS accounts within a specified Organizational Unit (OU).
-
-### S3 scripts
-- **[create_tar_file.py](s3/create_tar_file.py)** - Allows you to create tar file creation.
-- **[delete_empty_buckets.py](s3/delete_empty_buckets.py)** - Finds empty S3 buckets on your account and deletes them.
-- **[list_file_older_than_number_of_days.py](s3/list_file_older_than_number_of_days.py)** - Allows you to list all files older than N numbers of days.
-- **[search_bucket_and_delete.py](s3/search_bucket_and_delete.py)** - Searches for your chosen bucketname and then deletes all (versioned)objects in that S3 bucket before deleting the bucket itself.
-- **[search_file_in_bucket.py](s3/search_file_in_bucket.py)** - Allows you to search file in S3 bucket.
-- **[search_key_bucket.py](s3/search_key_bucket.py)** - Searches for a single keys/object in an S3 bucket and let's you know wether it exists or not.
-- **[search_multiple_keys_bucket.py](s3/search_multiple_keys_bucket.py)** - Searches for multiple keys/objects in an S3 bucket and let's you know wether it exists or not.
-- **[search_subdirectory.py](s3/search_subdirectory.py)** - Allows you to search subdirectory under nested folder structure.
-
-### SSM scripts
-- **[parameter_delete.sh](ssm/parameter_delete.sh)** - Allows you to delete ssm parameters through a json file.
-- **[parameter_register.sh](ssm/parameter_register.sh)** - Allows you to import ssm parameters through a json file.
-
-### Other scripts
-- **[delete_unused_security_groups.py](general/delete_unused_security_groups.py)** - Deletes all unused security groups in a single AWS Region
-- **[find_unused_security_groups.py](general/find_unused_security_groups.py)** - Finds all unused security groups in a single AWS Region
-- **[alias](cli/alias)** - This file contains a bunch of easy to remember aliases that runs complex AWS CLI commands.
-- **[tag_secrets.py](general/tag_secrets.py)** - This script allows you to tag all your secrets in AWS Secrets Manager quickly.
-- **[multi_account_execution.py](general/multi_account_execution.py)** - Gives you the ability to run Boto3 commands on all accounts which are specified in the aws_account_list.
 
 ---
 
-## Tools
-This list contains links to tools that automate or simplify the usage of AWS in the console, CLI or API's.
+## AWS Tools and Utilities
 
-### EC2 Tools
-- **[AutoSpotting](https://github.com/AutoSpotting/AutoSpotting)** - AutoSpotting is the leading open source spot market automation tool, optimized towards quick/easy/frictionless adoption of the EC2 spot market at any scale.
+This section lists tools that enhance AWS usage across console, CLI, and APIs.
 
-### ECS Tools
-- **[Awesome ECS](https://github.com/nathanpeck/awesome-ecs)** - A curated list of awesome ECS guides, development tools, and resources.
-- **[AWS Copilot CLI](https://github.com/aws/copilot-cli)** - The AWS Copilot CLI is a tool for developers to build, release and operate production ready containerized applications on Amazon ECS and AWS Fargate.
-- **[ECS Compose-X](https://github.com/compose-x/ecs_composex)** - A python app/lib to use your existing docker-compose files, add CFN resources definitions (or via Discovery) that takes care of all the complexity (IAM, Security Groups, Secrets, Volumes etc.) and generates curated CFN templates to deploy to AWS.
+### EC2
+- [AutoSpotting](https://github.com/AutoSpotting/AutoSpotting) - Open-source spot market automation tool for easy adoption at scale.
 
-### IAM Tools
-- **[AWS IAM Actions](https://www.awsiamactions.io)** - Website that contains every IAM action including a way to generate your own policy.
-- **[IAM Floyd](https://github.com/udondan/iam-floyd)** - AWS IAM policy statement generator with fluent interface.
-- **[IAM Zero](https://iamzero.dev)** - IAM Zero detects identity and access management issues and automatically suggests least-privilege policies.
+### ECS
+- [Awesome ECS](https://github.com/nathanpeck/awesome-ecs) - Curated list of ECS guides and resources.
+- [AWS Copilot CLI](https://github.com/aws/copilot-cli) - CLI for building and operating containerized applications on ECS and Fargate.
+- [ECS Compose-X](https://github.com/compose-x/ecs_composex) - Tool to generate CFN templates from docker-compose files with added AWS resource definitions.
 
-### Infra as Code Tools
-- **[Awesome CDK](https://github.com/kolomied/awesome-cdk)** - Curated list of awesome AWS Cloud Development Kit (AWS CDK) open-source projects, guides, blogs and other resources.
-- **[AWS CDK Starterkit](https://github.com/dannysteenman/aws-cdk-starterkit)** - Create and deploy an AWS CDK app on your AWS account in less than 5 minutes using GitHub actions!
-- **[Awesome CloudFormation](https://github.com/aws-cloudformation/awesome-cloudformation)** - A curated list of resources and projects for working with AWS CloudFormation.
-- **[Awesome Terraform](https://github.com/shuaibiyy/awesome-terraform)** - Curated list of resources on HashiCorp's Terraform.
-- **[CDK Snippets](https://towardsthecloud.com/blog/autocomplete-aws-cdk-constructs-vscode)** - This extension adds L1 construct snippets from CDK into Visual Studio Code.
-- **[CloudFormation Snippets](https://towardsthecloud.com/blog/autocomplete-cloudformation-resources-vscode)** - This extension adds snippets for all the AWS CloudFormation resources into Visual Studio Code.
-- **[Former2](https://github.com/iann0036/former2)** - Generate CloudFormation / Terraform / Troposphere templates from your existing AWS resources.
-- **[Open CDK Guide](https://github.com/kevinslin/open-cdk)** - This guide is an opinionated set of tips and best practices for working with the AWS Cloud Development Kit.
+### IAM
+- [AWS IAM Actions](https://www.awsiamactions.io) - Comprehensive IAM action listing and policy generator.
+- [IAM Floyd](https://github.com/udondan/iam-floyd) - Fluent interface for IAM policy statement generation.
+- [IAM Zero](https://iamzero.dev) - Automated least-privilege policy suggestion tool.
 
-### Lambda Tools
-- **[AWS Lambda Power Tuning](https://github.com/alexcasalboni/aws-lambda-power-tuning)** - AWS Lambda Power Tuning is a state machine powered by AWS Step Functions that helps you optimize your Lambda functions for cost and/or performance in a data-driven way.
-- **[Serverless Cost Calculator Comparison](http://serverlesscalc.com)** - Calculating the cost for AWS Lambda, Azure Functions, Google Cloud Functions. Providing good comparison or prediction on how the cost can vary depending on the memory, execution time, and number of executions on different cloud providers.
-- **[Serverless Cost Calculator](https://cost-calculator.bref.sh)** - Estimate AWS costs when running serverless applications on AWS Lambda.
+### Infrastructure as Code
+- [Awesome CDK](https://github.com/kolomied/awesome-cdk) - Curated list of AWS CDK resources.
+- [AWS CDK Starterkit](https://github.com/dannysteenman/aws-cdk-starterkit) - Rapid AWS CDK app deployment via GitHub actions.
+- [Awesome CloudFormation](https://github.com/aws-cloudformation/awesome-cloudformation) - Curated CloudFormation resources.
+- [Awesome Terraform](https://github.com/shuaibiyy/awesome-terraform) - Curated Terraform resources.
+- [VSCode CDK Snippets](https://marketplace.visualstudio.com/items?itemName=dannysteenman.cdk-snippets) - VS Code extension for CDK construct snippets.
+- [VSCode CloudFormation Snippets](https://marketplace.visualstudio.com/items?itemName=dannysteenman.cloudformation-yaml-snippets) - VS Code extension for CloudFormation resource snippets.
+- [VSCode SAM Snippets](https://marketplace.visualstudio.com/items?itemName=dannysteenman.sam-snippets) - VS Code extension for CloudFormation resource snippets.
+- [Former2](https://github.com/iann0036/former2) - Template generator from existing AWS resources.
+- [Open CDK Guide](https://github.com/kevinslin/open-cdk) - Opinionated AWS CDK best practices guide.
 
-### S3 Tools
-- **[s3s3mirror](https://github.com/cobbzilla/s3s3mirror)** - A lightning-fast and highly concurrent utility for mirroring content from one S3 bucket to another.
+### Lambda
+- [AWS Lambda Power Tuning](https://github.com/alexcasalboni/aws-lambda-power-tuning) - Step Functions-based Lambda optimization tool.
+- [Serverless Cost Calculator Comparison](http://serverlesscalc.com) - Cost comparison tool for serverless functions across cloud providers.
+- [Serverless Cost Calculator](https://cost-calculator.bref.sh) - AWS Lambda cost estimation tool.
 
-### Security Tools
-- **[Leapp](https://github.com/Noovolari/leapp)** - Cross-platform APP to manage Programmatic access in AWS.
-- **[Prowler](https://github.com/prowler-cloud/prowler)** - Prowler is an Open Source Security tool to perform Cloud Security best practices assessments, audits, incident response, continuous monitoring, hardening and forensics readiness.
-- **[AWS Security Tools](https://github.com/0xVariable/AWS-Security-Tools)** - A curated list of Security tools that you can use on AWS.
+### S3
+- [s3s3mirror](https://github.com/cobbzilla/s3s3mirror) - High-performance S3 bucket mirroring utility.
 
-### SSM Tools
-- **[aws-gate](https://github.com/xen0l/aws-gate)** - A Better AWS SSM Session manager CLI client.
-- **[aws-ssm-ec2-proxy-command](https://github.com/qoomon/aws-ssm-ec2-proxy-command)** - Open an SSH connection to your ec2 instances via AWS SSM without the need to open any ssh port in you security groups.
-- **[HQarroum/ssm-supercharged](https://github.com/HQarroum/ssm-supercharged)** - AWS SSM integration with OpenSSH + EC2 Instance Connect + sshuttle.
+### Security
+- [Leapp](https://github.com/Noovolari/leapp) - Cross-platform AWS programmatic access manager.
+- [Prowler](https://github.com/prowler-cloud/prowler) - Open-source security assessment and auditing tool.
+- [AWS Security Tools](https://github.com/0xVariable/AWS-Security-Tools) - Curated list of AWS security tools.
 
-### Other Tools
-- **[Steampipe](https://github.com/turbot/steampipe)** - Query AWS resources in a SQL like fashion.
-- **[AWS Nuke](https://github.com/rebuy-de/aws-nuke)** - Remove all resources from an AWS account.
+### SSM
+- [aws-gate](https://github.com/xen0l/aws-gate) - Enhanced AWS SSM Session Manager CLI.
+- [aws-ssm-ec2-proxy-command](https://github.com/qoomon/aws-ssm-ec2-proxy-command) - SSH to EC2 via SSM without open ports.
+- [ssm-supercharged](https://github.com/HQarroum/ssm-supercharged) - SSM integration with OpenSSH, EC2 Instance Connect, and sshuttle.
+
+### Miscellaneous
+- [Steampipe](https://github.com/turbot/steampipe) - SQL-like querying for AWS resources.
+- [AWS Nuke](https://github.com/rebuy-de/aws-nuke) - AWS account resource removal tool.
 
 ---
 
