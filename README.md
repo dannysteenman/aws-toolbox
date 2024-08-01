@@ -46,6 +46,7 @@ This collection includes Python and Bash scripts for managing various AWS servic
 
 | Category       | Script Name                                                                                    | Description                                    |
 | -------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| AppStream      | [appstream_delete_image.py](appstream/appstream_delete_image.py)                               | Unshares AppStream image, then deletes it      |
 | CloudFormation | [cfn_delete_stackset.py](cloudformation/cfn_delete_stackset.py)                                | Deletes stackset and associated instances      |
 | CloudWatch     | [cw_delete_log_groups.py](cloudwatch/cw_delete_log_groups.py)                                  | Deletes log groups based on age                |
 | CloudWatch     | [cw_set_retention_policy.py](cloudwatch/cw_set_retention_policy.py)                            | Sets retention policy for log groups           |
