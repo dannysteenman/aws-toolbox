@@ -111,15 +111,16 @@ This section lists tools that enhance AWS usage across console, CLI, and APIs.
 - [IAM Zero](https://iamzero.dev) - Automated least-privilege policy suggestion tool.
 
 ### Infrastructure as Code
-- [Awesome CDK](https://github.com/kolomied/awesome-cdk) - Curated list of AWS CDK resources.
 - [AWS CDK Starterkit](https://github.com/dannysteenman/aws-cdk-starterkit) - Rapid AWS CDK app deployment via GitHub actions.
+- [AWS CloudFormation Starterkit](https://github.com/dannysteenman/aws-cloudformation-starterkit) - Rapid AWS CloudFormation stack deployment via GitHub actions.
+- [Awesome CDK](https://github.com/kolomied/awesome-cdk) - Curated list of AWS CDK resources.
 - [Awesome CloudFormation](https://github.com/aws-cloudformation/awesome-cloudformation) - Curated CloudFormation resources.
 - [Awesome Terraform](https://github.com/shuaibiyy/awesome-terraform) - Curated Terraform resources.
+- [Former2](https://github.com/iann0036/former2) - Template generator from existing AWS resources.
+- [Open CDK Guide](https://github.com/kevinslin/open-cdk) - Opinionated AWS CDK best practices guide.
 - [VSCode CDK Snippets](https://marketplace.visualstudio.com/items?itemName=dannysteenman.cdk-snippets) - VS Code extension for CDK construct snippets.
 - [VSCode CloudFormation Snippets](https://marketplace.visualstudio.com/items?itemName=dannysteenman.cloudformation-yaml-snippets) - VS Code extension for CloudFormation resource snippets.
 - [VSCode SAM Snippets](https://marketplace.visualstudio.com/items?itemName=dannysteenman.sam-snippets) - VS Code extension for CloudFormation resource snippets.
-- [Former2](https://github.com/iann0036/former2) - Template generator from existing AWS resources.
-- [Open CDK Guide](https://github.com/kevinslin/open-cdk) - Opinionated AWS CDK best practices guide.
 
 ### Lambda
 - [AWS Lambda Power Tuning](https://github.com/alexcasalboni/aws-lambda-power-tuning) - Step Functions-based Lambda optimization tool.
