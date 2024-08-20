@@ -1,4 +1,4 @@
-# [![AWS Toolbox header](https://raw.githubusercontent.com/dannysteenman/aws-toolbox/main/icons/github-header-image.png)](https://towardsthecloud.com)
+# [![AWS Toolbox header](./icons/github-header-image.png)](https://towardsthecloud.com)
 
 # AWS Toolbox 🧰
 
@@ -154,7 +154,7 @@ This project exists thanks to all the people who contribute.
 See how you can [contribute to this repository.](https://github.com/dannysteenman/aws-toolbox/blob/main/.github/CONTRIBUTING.md)
 
 ## Author
-Danny Steenman
+[Danny Steenman](https://towardsthecloud.com/about)
 
 [![](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dannysteenman)
 [![](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/dannysteenman)
