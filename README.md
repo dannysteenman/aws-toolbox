@@ -44,51 +44,51 @@ Navigate to the relevant AWS service section. Click on the script name in the ta
 
 This collection includes Python and Bash scripts for managing various AWS services. The scripts are organized by service for easy navigation.
 
-| Category       | Script Name                                                                                    | Description                                    |
-| -------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| AppStream      | [appstream_delete_image.py](appstream/appstream_delete_image.py)                               | Unshares AppStream image, then deletes it      |
-| CloudFormation | [cfn_delete_stackset.py](cloudformation/cfn_delete_stackset.py)                                | Deletes stackset and associated instances      |
-| CloudWatch     | [cw_delete_log_groups.py](cloudwatch/cw_delete_log_groups.py)                                  | Deletes log groups based on age                |
-| CloudWatch     | [cw_set_retention_policy.py](cloudwatch/cw_set_retention_policy.py)                            | Sets retention policy for log groups           |
-| CodePipeline   | [cp_slack_notifications.py](codepipeline/cp_slack_notifications.py)                            | Enables notifications on Slack                 |
-| EC2            | [ec2_delete_unattached_volumes.py](ec2/ec2_delete_unattached_volumes.py)                       | Deletes unattached EBS volumes                 |
-| EC2            | [ec2_delete_unused_eips.py](ec2/ec2_delete_unused_eips.py)                                     | Deletes unused Elastic IPs                     |
-| EC2            | [ec2_delete_unused_keypairs.py](ec2/ec2_delete_unused_keypairs.py)                             | Deletes unused EC2 keypairs                    |
-| EC2            | [ec2_delete_unused_keypairs_single_region.py](ec2/ec2_delete_unused_keypairs_single_region.py) | Deletes unused EC2 keypairs in a single region |
-| EC2            | [ec2_delete_tagged_security_groups.py](ec2/ec2_delete_tagged_security_groups.py)               | Deletes tagged security groups                 |
-| EC2            | [ec2_find_unattached_volumes.py](ec2/ec2_find_unattached_volumes.py)                           | Finds unattached EBS volumes                   |
-| EC2            | [ec2_find_all_unused_keypairs.py](ec2/ec2_find_all_unused_keypairs.py)                         | Finds all EC2 keypairs                         |
-| EC2            | [ec2_find_unused_keypairs_single_region.py](ec2/ec2_find_unused_keypairs_single_region.py)     | Finds EC2 keypairs in a single region          |
-| EC2            | [ec2_asg_ssh.sh](ec2/ec2_asg_ssh.sh)                                                           | SSH wrapper for Auto Scaling group instances   |
-| EC2            | [ec2_list_available_eips.sh](ec2/ec2_list_available_eips.sh)                                   | Lists unassociated Elastic IPs                 |
-| EC2            | [ec2_request_spot_instances.sh](ec2/ec2_request_spot_instances.sh)                             | Requests spot instances                        |
-| EC2            | [ec2_resize_volume.sh](ec2/ec2_resize_volume.sh)                                               | Resizes EBS volume                             |
-| ECS            | [ecs_delete_inactive_task_definitions.py](ecs/ecs_delete_inactive_task_definitions.py)         | Deletes inactive ECS task definitions          |
-| ECS            | [ecs_publish_ecr_image.sh](ecs/ecs_publish_ecr_image.sh)                                       | Publishes Docker image to ECR                  |
-| EFS            | [efs_delete_tagged_filesystems.py](efs/efs_delete_tagged_filesystems.py)                       | Deletes tagged EFS and mount targets           |
-| IAM            | [iam_delete_user.py](iam/iam_delete_user.py)                                                   | Deletes IAM users                              |
-| IAM            | [iam_rotate_access_keys.py](iam/iam_rotate_access_keys.py)                                     | Rotates IAM user keys                          |
-| IAM            | [iam_assume_role.sh](iam/iam_assume_role.sh)                                                   | Assumes IAM role                               |
-| Organizations  | [org_assign_sso_access_by_ou.py](organizations/org_assign_sso_access_by_ou.py)                 | Assigns SSO access for accounts in an OU       |
-| Organizations  | [org_import_users_to_sso.py](organizations/org_import_users_to_sso.py)                         | Imports users/groups to AWS SSO                |
-| Organizations  | [org_list_accounts_by_ou.py](organizations/org_list_accounts_by_ou.py)                         | Lists accounts in an OU                        |
-| Organizations  | [org_list_sso_assignments.py](organizations/org_list_sso_assignments.py)                       | Lists SSO assignments for accounts             |
-| Organizations  | [org_remove_sso_access_by_ou.py](organizations/org_remove_sso_access_by_ou.py)                 | Removes SSO access for accounts in an OU       |
-| S3             | [s3_create_tar.py](s3/s3_create_tar.py)                                                        | Creates tar files                              |
-| S3             | [s3_delete_empty_buckets.py](s3/s3_delete_empty_buckets.py)                                    | Deletes empty S3 buckets                       |
-| S3             | [s3_list_old_files.py](s3/s3_list_old_files.py)                                                | Lists old files in S3                          |
-| S3             | [s3_delete_bucket_and_contents.py](s3/s3_delete_bucket_and_contents.py)                        | Deletes S3 bucket and its contents             |
-| S3             | [s3_search_file.py](s3/s3_search_file.py)                                                      | Searches for files in S3 bucket                |
-| S3             | [s3_search_key.py](s3/s3_search_key.py)                                                        | Searches for a key in S3 bucket                |
-| S3             | [s3_search_multiple_keys.py](s3/s3_search_multiple_keys.py)                                    | Searches for multiple keys in S3 bucket        |
-| S3             | [s3_search_subdirectory.py](s3/s3_search_subdirectory.py)                                      | Searches subdirectories in S3                  |
-| SSM            | [ssm_delete_parameters.sh](ssm/ssm_delete_parameters.sh)                                       | Deletes SSM parameters                         |
-| SSM            | [ssm_import_parameters.sh](ssm/ssm_import_parameters.sh)                                       | Imports SSM parameters                         |
-| General        | [delete_unused_security_groups.py](general/delete_unused_security_groups.py)                   | Deletes unused security groups                 |
-| General        | [find_unused_security_groups.py](general/find_unused_security_groups.py)                       | Finds unused security groups                   |
-| General        | [aws_cli_aliases.sh](cli/aws_cli_aliases.sh)                                                   | AWS CLI command aliases                        |
-| General        | [tag_secrets_manager_secrets.py](general/tag_secrets_manager_secrets.py)                       | Tags Secrets Manager secrets                   |
-| General        | [multi_account_command_executor.py](general/multi_account_command_executor.py)                 | Runs commands across multiple AWS accounts     |
+| Category       | Script Name                                                                                       | Description                                                        |
+| -------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| AppStream      | [appstream_delete_image.py](appstream/appstream_delete_image.py)                                  | Unshares AppStream image, then deletes it                          |
+| CloudFormation | [cfn_delete_stackset.py](cloudformation/cfn_delete_stackset.py)                                   | Deletes stackset and associated instances                          |
+| CloudWatch     | [cw_count_log_groups.py](cloudwatch/cw_count_log_groups.py)                                       | Counts the total number of CloudWatch log groups in an AWS account |
+| CloudWatch     | [cw_delete_log_groups.py](cloudwatch/cw_delete_log_groups.py)                                     | Deletes log groups based on age                                    |
+| CloudWatch     | [cw_fetch_log_groups_with_creation_date.py](cloudwatch/cw_fetch_log_groups_with_creation_date.py) | Fetches log groups with creation date                              |
+| CloudWatch     | [cw_set_retention_policy.py](cloudwatch/cw_set_retention_policy.py)                               | Sets retention policy for log groups                               |
+| CodePipeline   | [cp_slack_notifications.py](codepipeline/cp_slack_notifications.py)                               | Enables notifications on Slack                                     |
+| EC2            | [ec2_delete_unattached_volumes.py](ec2/ec2_delete_unattached_volumes.py)                          | Deletes unattached EBS volumes                                     |
+| EC2            | [ec2_delete_unused_eips.py](ec2/ec2_delete_unused_eips.py)                                        | Deletes unused Elastic IPs                                         |
+| EC2            | [ec2_delete_unused_keypairs_all_regions.py](ec2/ec2_delete_unused_keypairs_all_regions.py)        | Deletes unused EC2 keypairs in all regions                         |
+| EC2            | [ec2_delete_unused_keypairs_single_region.py](ec2/ec2_delete_unused_keypairs_single_region.py)    | Deletes unused EC2 keypairs in a single region                     |
+| EC2            | [ec2_delete_tagged_security_groups.py](ec2/ec2_delete_tagged_security_groups.py)                  | Deletes tagged security groups                                     |
+| EC2            | [ec2_find_unattached_volumes.py](ec2/ec2_find_unattached_volumes.py)                              | Finds unattached EBS volumes                                       |
+| EC2            | [ec2_asg_ssh.sh](ec2/ec2_asg_ssh.sh)                                                              | SSH wrapper for Auto Scaling group instances                       |
+| EC2            | [ec2_list_available_eips.sh](ec2/ec2_list_available_eips.sh)                                      | Lists unassociated Elastic IPs                                     |
+| EC2            | [ec2_request_spot_instances.sh](ec2/ec2_request_spot_instances.sh)                                | Requests spot instances                                            |
+| EC2            | [ec2_resize_volume.sh](ec2/ec2_resize_volume.sh)                                                  | Resizes EBS volume                                                 |
+| ECS            | [ecs_delete_inactive_task_definitions.py](ecs/ecs_delete_inactive_task_definitions.py)            | Deletes inactive ECS task definitions                              |
+| ECS            | [ecs_publish_ecr_image.sh](ecs/ecs_publish_ecr_image.sh)                                          | Publishes Docker image to ECR                                      |
+| EFS            | [efs_delete_tagged_filesystems.py](efs/efs_delete_tagged_filesystems.py)                          | Deletes tagged EFS and mount targets                               |
+| IAM            | [iam_delete_user.py](iam/iam_delete_user.py)                                                      | Deletes IAM users                                                  |
+| IAM            | [iam_identity_center_create_users.py](iam/iam_identity_center_create_users.py)                    | Create IAM Identity Center (SSO) users                             |
+| IAM            | [iam_rotate_access_keys.py](iam/iam_rotate_access_keys.py)                                        | Rotates IAM user keys                                              |
+| IAM            | [iam_assume_role.sh](iam/iam_assume_role.sh)                                                      | Assumes IAM role                                                   |
+| Organizations  | [org_assign_sso_access_by_ou.py](organizations/org_assign_sso_access_by_ou.py)                    | Assigns SSO access for accounts in an OU                           |
+| Organizations  | [org_import_users_to_sso.py](organizations/org_import_users_to_sso.py)                            | Imports users/groups to AWS SSO                                    |
+| Organizations  | [org_list_accounts_by_ou.py](organizations/org_list_accounts_by_ou.py)                            | Lists accounts in an OU                                            |
+| Organizations  | [org_list_sso_assignments.py](organizations/org_list_sso_assignments.py)                          | Lists SSO assignments for accounts                                 |
+| Organizations  | [org_remove_sso_access_by_ou.py](organizations/org_remove_sso_access_by_ou.py)                    | Removes SSO access for accounts in an OU                           |
+| S3             | [s3_create_tar.py](s3/s3_create_tar.py)                                                           | Creates tar files                                                  |
+| S3             | [s3_delete_empty_buckets.py](s3/s3_delete_empty_buckets.py)                                       | Deletes empty S3 buckets                                           |
+| S3             | [s3_list_old_files.py](s3/s3_list_old_files.py)                                                   | Lists old files in S3                                              |
+| S3             | [s3_delete_bucket_and_contents.py](s3/s3_delete_bucket_and_contents.py)                           | Deletes S3 bucket and its contents                                 |
+| S3             | [s3_search_file.py](s3/s3_search_file.py)                                                         | Searches for files in S3 bucket                                    |
+| S3             | [s3_search_key.py](s3/s3_search_key.py)                                                           | Searches for a key in S3 bucket                                    |
+| S3             | [s3_search_multiple_keys.py](s3/s3_search_multiple_keys.py)                                       | Searches for multiple keys in S3 bucket                            |
+| S3             | [s3_search_subdirectory.py](s3/s3_search_subdirectory.py)                                         | Searches subdirectories in S3                                      |
+| SSM            | [ssm_delete_parameters.sh](ssm/ssm_delete_parameters.sh)                                          | Deletes SSM parameters                                             |
+| SSM            | [ssm_import_parameters.sh](ssm/ssm_import_parameters.sh)                                          | Imports SSM parameters                                             |
+| General        | [delete_unused_security_groups.py](general/delete_unused_security_groups.py)                      | Deletes unused security groups                                     |
+| General        | [aws_cli_aliases.sh](cli/aws_cli_aliases.sh)                                                      | AWS CLI command aliases                                            |
+| General        | [tag_secrets_manager_secrets.py](general/tag_secrets_manager_secrets.py)                          | Tags Secrets Manager secrets                                       |
+| General        | [multi_account_command_executor.py](general/multi_account_command_executor.py)                    | Runs commands across multiple AWS accounts                         |
 
 
 ---
