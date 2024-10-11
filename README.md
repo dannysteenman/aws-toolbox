@@ -144,6 +144,8 @@ This section lists tools that enhance AWS usage across console, CLI, and APIs.
 - [ssm-supercharged](https://github.com/HQarroum/ssm-supercharged) - SSM integration with OpenSSH, EC2 Instance Connect, and sshuttle.
 
 ### Miscellaneous
+- [Cloud Custodian](https://github.com/cloud-custodian/cloud-custodian) - Cloud governance platform for AWS.
+- [Service Screener](https://github.com/aws-samples/service-screener-v2) - Tool to evaluate your AWS service configurations based on AWS and community best practices.
 - [Steampipe](https://github.com/turbot/steampipe) - SQL-like querying for AWS resources.
 - [AWS Nuke](https://github.com/rebuy-de/aws-nuke) - AWS account resource removal tool.
 
