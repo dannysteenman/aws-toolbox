@@ -123,6 +123,8 @@ This section lists tools that enhance AWS usage across console, CLI, and APIs.
 - [Awesome Terraform](https://github.com/shuaibiyy/awesome-terraform) - Curated Terraform resources.
 - [Former2](https://github.com/iann0036/former2) - Template generator from existing AWS resources.
 - [Open CDK Guide](https://github.com/kevinslin/open-cdk) - Opinionated AWS CDK best practices guide.
+- [VSCode IAM Actions Snippets](https://github.com/dannysteenman/vscode-iam-actions-snippets) - Adds autocompletion in VS Code for AWS IAM policy actions.
+- [VSCode IAM Service Principal Snippets](https://github.com/dannysteenman/vscode-iam-service-principal-snippets) - Adds autocompletion in VS Code for AWS service principals.
 - [VSCode CDK Snippets](https://marketplace.visualstudio.com/items?itemName=dannysteenman.cdk-snippets) - VS Code extension for CDK construct snippets.
 - [VSCode CloudFormation Snippets](https://marketplace.visualstudio.com/items?itemName=dannysteenman.cloudformation-yaml-snippets) - VS Code extension for CloudFormation resource snippets.
 - [VSCode SAM Snippets](https://marketplace.visualstudio.com/items?itemName=dannysteenman.sam-snippets) - VS Code extension for CloudFormation resource snippets.
